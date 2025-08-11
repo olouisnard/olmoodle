@@ -1,0 +1,2118 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,landscape]{geometry}
+
+\usepackage{moodle}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm,thmtools}
+\usepackage{graphicx}
+
+\usepackage{layouts}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage{xspace}
+
+
+\usepackage[french]{babel}
+
+\usepackage{ifthen}
+\usepackage{verbatim} % Pour mettre des parties en commentaire
+
+\usepackage{mymaths}
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+
+
+\begin{quiz}{TRANSFERT DE MATIÈRE/LOUISNARD/NUMERIQUES/FRUITAUTO} 
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 4.0\,  \mathrm{cm} $
+
+Température $T = 31.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 42.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4496.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.60 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.61 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0833311219e-02}] 6.1666622437e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={6.5124253172e-05}] 1.3024850634e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={8.8913768339e-02}] 1.7782753668e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.7343782702e-02}] 7.4687565405e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={6.0773202503e-09}] 1.2154640501e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.0677486288e+03}] 4.1354972576e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 7.0\,  \mathrm{cm} $
+
+Température $T = 32.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 32.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4759.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.62 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.62 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0817891752e-02}] 6.1635783504e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.7446318822e-05}] 7.4892637645e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={9.3797691240e-02}] 1.8759538248e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.0015261197e-02}] 6.0030522394e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.3236057510e-08}] 2.6472115021e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.9075508305e+03}] 5.8151016610e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 9.0\,  \mathrm{cm} $
+
+Température $T = 40.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 47.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 7384.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.75 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.69 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0712519834e-02}] 6.1425039668e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0578181126e-05}] 6.1156362251e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.4181340072e-01}] 2.8362680144e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={6.6652298338e-02}] 1.3330459668e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.1054366685e-08}] 4.2108733370e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.0215704033e+03}] 6.0431408065e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 8.0\,  \mathrm{cm} $
+
+Température $T = 31.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 44.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4496.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.60 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.61 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0833311219e-02}] 6.1666622437e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.2562126586e-05}] 6.5124253172e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={8.8913768339e-02}] 1.7782753668e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.9122058069e-02}] 7.8244116138e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.1735514966e-08}] 2.3471029932e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.2831935882e+03}] 8.5663871765e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 5.0\,  \mathrm{cm} $
+
+Température $T = 45.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 50.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 9594.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.83 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.74 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0655132554e-02}] 6.1310265108e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={5.6699011093e-05}] 1.1339802219e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.8136119788e-01}] 3.6272239575e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={9.0680598938e-02}] 1.8136119788e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.4537249572e-08}] 2.9074499143e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.3506649926e+03}] 2.7013299852e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 49.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 50.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 11751.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.90 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.78 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0608917175e-02}] 6.1217834351e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.8362765373e-05}] 9.6725530745e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.1938325623e-01}] 4.3876651246e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0969162812e-01}] 2.1938325623e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.1599290354e-08}] 4.3198580707e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.3090399462e+03}] 2.6180798924e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 43.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 49.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 8650.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.80 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.72 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0674948261e-02}] 6.1349896522e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.6698260668e-05}] 9.3396521335e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.6454722700e-01}] 3.2909445400e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={8.0628141230e-02}] 1.6125628246e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.5955716941e-08}] 3.1911433883e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.7720503558e+03}] 3.5441007115e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 9.0\,  \mathrm{cm} $
+
+Température $T = 33.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 31.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 5035.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.64 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.62 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0802447484e-02}] 6.1604894967e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.9306423916e-05}] 5.8612847832e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={9.8909270407e-02}] 1.9781854081e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.0661873826e-02}] 6.1323747652e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.8322566593e-08}] 3.6645133185e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.4720709522e+03}] 6.9441419043e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 4.0\,  \mathrm{cm} $
+
+Température $T = 39.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 32.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 6999.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.74 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.68 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0725236713e-02}] 6.1450473427e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={6.8387961112e-05}] 1.3677592222e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.3485528818e-01}] 2.6971057636e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.3153692217e-02}] 8.6307384434e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.1348250305e-08}] 2.2696500609e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.1073399226e+03}] 2.2146798453e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 9.0\,  \mathrm{cm} $
+
+Température $T = 27.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 39.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 3568.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.54 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.57 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0893042361e-02}] 6.1786084723e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.8227928319e-05}] 5.6455856639e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.1491504710e-02}] 1.4298300942e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.7881686837e-02}] 5.5763373673e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.1277184123e-08}] 2.2554368245e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={5.6412354843e+03}] 1.1282470969e+05 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 7.0\,  \mathrm{cm} $
+
+Température $T = 47.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 45.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 10626.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.87 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.76 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0635096637e-02}] 6.1270193274e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.0974860016e-05}] 8.1949720032e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.9960788473e-01}] 3.9921576945e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={8.9823548127e-02}] 1.7964709625e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.4929083595e-08}] 4.9858167190e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.5437595153e+03}] 3.0875190305e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 46.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 49.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 10098.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.85 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.75 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0645200544e-02}] 6.1290401087e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.7526099213e-05}] 9.5052198427e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.9029955720e-01}] 3.8059911439e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={9.3246783026e-02}] 1.8649356605e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.8779974505e-08}] 3.7559949010e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.5055576287e+03}] 3.0111152573e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 5.0\,  \mathrm{cm} $
+
+Température $T = 45.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 42.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 9594.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.83 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.74 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0655132554e-02}] 6.1310265108e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={5.6699011093e-05}] 1.1339802219e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.8136119788e-01}] 3.6272239575e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.6171703108e-02}] 1.5234340622e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.6863209503e-08}] 3.3726419006e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.1643663729e+03}] 2.3287327458e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 31.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 54.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4496.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.60 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.61 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0833311219e-02}] 6.1666622437e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.3416168781e-05}] 8.6832337562e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={8.8913768339e-02}] 1.7782753668e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.8013434903e-02}] 9.6026869806e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={7.2299154702e-09}] 1.4459830940e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.9107419719e+03}] 7.8214839437e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 39.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 51.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 6999.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.74 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.68 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0725236713e-02}] 6.1450473427e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.5591974075e-05}] 9.1183948150e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.3485528818e-01}] 2.6971057636e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={6.8776196971e-02}] 1.3755239394e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.2266123491e-08}] 2.4532246982e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.3050749410e+03}] 4.6101498820e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 4.0\,  \mathrm{cm} $
+
+Température $T = 25.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 59.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 3169.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.51 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.55 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0917435546e-02}] 6.1834871093e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={6.2716540658e-05}] 1.2543308132e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={6.3940460736e-02}] 1.2788092147e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.7724871835e-02}] 7.5449743669e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.9751856424e-09}] 5.9503712848e-08 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.2237265585e+03}] 8.4474531170e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 7.0\,  \mathrm{cm} $
+
+Température $T = 35.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 45.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 5628.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.67 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.64 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0775899354e-02}] 6.1551798708e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.8143693141e-05}] 7.6287386281e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0984985892e-01}] 2.1969971783e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.9432436512e-02}] 9.8864873025e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.2771249412e-08}] 2.5542498823e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.0133707961e+03}] 6.0267415922e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 5.0\,  \mathrm{cm} $
+
+Température $T = 32.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 39.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4759.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.62 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.62 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0817891752e-02}] 6.1635783504e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={5.2424846351e-05}] 1.0484969270e-03 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={9.3797691240e-02}] 1.8759538248e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.6581099584e-02}] 7.3162199167e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={8.4810872702e-09}] 1.6962174540e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.3151458603e+03}] 4.6302917207e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 6.0\,  \mathrm{cm} $
+
+Température $T = 29.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 33.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4009.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.57 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.59 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0864075986e-02}] 6.1728151972e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={4.2876930400e-05}] 8.5753860800e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.9795814118e-02}] 1.5959162824e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={2.6332618659e-02}] 5.2665237318e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={9.3332623395e-09}] 1.8666524679e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.0294159592e+03}] 6.0588319183e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Séchage d un fruit} 
+Un fruit sphérique de diamètre $D$, humide en surface, est séché par de l'air à la température $T_\infty$, d'humidité relative $\psi$, s'écoulant à la vitesse $U_\infty$.
+
+On veut calculer la vitesse d'évaporation de la pellicule d'eau en surface.
+
+ 
+
+Les données sont les suivantes :
+
+ 
+
+Diamètre $D = 7.0\,  \mathrm{cm} $
+
+Température $T = 29.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Humidité relative $\psi = 48.\, \% $
+
+Vitesse $U_\infty = 0.0\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Pression atmosphérique $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Pression de valeur saturante de l’eau à la température donnée $p_{\text{sat}}(T) = 4009.\,  \mathrm{Pa} $
+
+Coefficient de diffusion air/vapeur d’eau $D_{AV} =  2.57 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Viscosité cinématique de l’air $\nu =  1.59 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Ces données vous sont personnelles.
+
+ 
+
+Calculez les grandeurs ci-dessous. La corrélation utilisée doit \textbf{faire intervenir le nombre de Schmidt}.
+
+Dans vos réponses, utilisez les notations scientifiques si besoin est ($6.34\, 10^{-5}$ s'écrit 6.34e-5 et $10^{3}$ s'écrit 1e3).
+
+Vous avez droit à une marge d'erreur relative de $5.0\, \% $
+
+Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l'intervalle indiqué.
+
+ 
+
+Nombre de Reynolds : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={0.0000000000e+00}] 0.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (0. \, - \, 0.) $ 
+
+Nombre de Schmidt : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0864075986e-02}] 6.1728151972e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.12 \, 10^{-1}  \, - \,  6.18 \, 10^{-1} ) $ 
+
+Nombre de Sherwood : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.0000000000e-01}] 2.0000000000e+00 
+\end{numerical} 
+ $\,$ 
+ $ \quad (2. \, - \, 2.) $ 
+
+Coefficient d'échange : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.6751654628e-05}] 7.3503309257e-04 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.65 \, 10^{-4}  \, - \,  1.37 \, 10^{-3} ) $ 
+
+Concentration en vapeur à la surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.9795814118e-02}] 1.5959162824e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (1.27 \, - \, 4.38) $ 
+
+Concentration en vapeur incidente : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={3.8301990777e-02}] 7.6603981553e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.52 \, - \, 2.19) $ 
+
+Flux massique d'évaporation : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={8.4510136606e-09}] 1.6902027321e-07 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 5.95 \, 10^{-8}  \, - \,  4.99 \, 10^{-7} ) $ 
+
+ 
+
+On donne l'épaisseur du film d'eau à la surface du fruit $e = 1.0\,  \mathrm{mm} $
+
+Calculez le temps total d'évaporation : $\tau =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.5538336053e+03}] 9.1076672106e+04 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (22140. \, - \, 112820.) $ 
+
+\end{cloze} 
+
+
+\end{quiz}
+\end{document}

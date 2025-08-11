@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a question bank made for Moodle -->
+<!-- It was generated on 2025-08-09 22:28 by XeLaTeX running -->
+<!-- on *NIX with the package moodle v1.0 (2023/01/28) -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/NUMERIQUES/AIRHUMIDE</text>
+  </category>
+</question>
+ 
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 24.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 58.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=1.0816299475e+01:1.0816299475e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.5641304330e-01:8.5641304330e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=5.1647265839e+01:5.1647265839e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 25.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 66.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=1.3115033324e+01:1.3115033324e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.6241672355e-01:8.6241672355e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=5.8526366869e+01:5.8526366869e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 24.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 70.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=1.3101293352e+01:1.3101293352e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.5950556792e-01:8.5950556792e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=5.7462529556e+01:5.7462529556e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 29.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 54.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=1.3582319160e+01:1.3582319160e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.7463003205e-01:8.7463003205e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=6.3835329721e+01:6.3835329721e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 18.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 66.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=8.4780040261e+00:8.4780040261e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.3601974032e-01:8.3601974032e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=3.9573770882e+01:3.9573770882e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 25.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 56.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=1.1092467680e+01:1.1092467680e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.5967015887e-01:8.5967015887e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=5.3375296687e+01:5.3375296687e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 18.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 73.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=9.3907625611e+00:9.3907625611e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.3723012966e-01:8.3723012966e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=4.1886755776e+01:4.1886755776e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 16.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 73.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=8.2565452008e+00:8.2565452008e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.2998520600e-01:8.2998520600e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=3.6972527107e+01:3.6972527107e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 24.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 50.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=9.3020833320e+00:9.3020833320e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.5436369395e-01:8.5436369395e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=4.7793616038e+01:4.7793616038e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Air humide]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Le thermomètre sec d’une centrale météorologique indique une température \(\theta = 21.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Le capteur d&rsquo;humidité indique une humidité relative \(\psi = 64.\, \% \) <BR/>La pression atmosphérique vaut \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Calculez les grandeurs ci-dessous. <BR/>(dans vos réponses, utilisez les notations scientifiques si besoin est. Par exemple \(6.34\, 10^{-5}\) s&rsquo;écrit 6.34e-5 et \(10^{3}\) s&rsquo;écrit 1e3). <BR/>Vous avez droit à une marge d&rsquo;erreur relative de \(10.0\, \% \) <BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à vérifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/>Humidité absolue : \(w = \) {1:NUMERICAL:=9.9313855729e+00:9.9313855729e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (8. \, - \, 13.) \) <BR/>Volume massique par unité de masse AS : \(v = \) {1:NUMERICAL:=8.4658121678e-01:8.4658121678e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.30 \, 10^{-1} \, - \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpie par unité de masse AS : \(h = \) {2:NUMERICAL:=4.6325952290e+01:4.6325952290e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (36. \, - \, 63.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+ 
+</quiz>
