@@ -51,9 +51,9 @@ errorcodes.PRECISION_UNSPECIFIED = 12 ;
 %
 %======================================================================
 opts = detectImportOptions(xlsfilename) ;
-opts = setvaropts(opts, 'Formattage', 'FillValue', {''} ); % A vérifier
+% opts = setvaropts(opts, 'Formattage', 'FillValue', {''} ); % A vérifier
 
-tabcells = readcell(xlsfilename) ;
+tabcells = readcell(xlsfilename, "Range", "A1:I100") ;
 
 % Size of Excel zone read 
 [nlines, ncols] = size(tabcells) ;
