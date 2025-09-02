@@ -76,9 +76,10 @@ genstruct.lists.question = [] ;
 
 errorstruct = struct([]) ;
 nerrors = 0 ;
+
 NSET_WAS_FOUND = 0 ;
 TOL_WAS_FOUND = 0 ;
-
+MOODLECAT_WAS_FOUND = 0 ;
 %======================================================================
 %
 % MAIN LOOP
@@ -105,6 +106,8 @@ while ~done
       % Moodle category to store questions
       %============================================================
       tmp = tabcells{ilin, CMOODLECAT} ; 
+      MOODLECAT_WAS_FOUND = 1 ;
+
       if any(ismissing(tmp)) || isempty(tmp)
 	genstruct.moodlecategory = [] ;     	
       else
@@ -408,4 +411,8 @@ if ~NSET_WAS_FOUND
   nerrors = nerrors  + 1 ;
   errorstruct(nerrors).code = errorcodes.NSET_UNSPECIFIED ;
   errorstruct(nerrors).line = 0 ;
+end
+
+if ~MOODLECAT_WAS_FOUND
+  genstruct.moodlecategory = [] ; 
 end
