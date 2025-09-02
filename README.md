@@ -9,7 +9,7 @@ The main script takes an Excel file on input, whose shape is very similar to the
 ## Visuals
 Example images
 
-![Image](airhumide_en.pdf "icon")
+![Image](examples/airhumide/airhumide_en.pdf "icon")
 
 ## Installation
 You will generally install in a subpath of your personal main matlab folder (for example `/home/albert/matlab`), but it can be anywhere. Go to that directory and get the files. If you downloaded the code through git, you're ready to carry on. If you downloaded a .tgz archive, uncompress it here.
