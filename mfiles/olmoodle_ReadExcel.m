@@ -106,7 +106,7 @@ while ~done
       %============================================================
       tmp = tabcells{ilin, CMOODLECAT} ; 
       if any(ismissing(tmp)) || isempty(tmp)
-	genstruct.moodlecategory = ' ' ;     	
+	genstruct.moodlecategory = [] ;     	
       else
 	genstruct.moodlecategory = tmp ;     
       end
