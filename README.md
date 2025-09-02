@@ -7,7 +7,7 @@ OLMOODLE is a MATLAB suite to easily create [calculated numerical questions in m
 The main script takes an Excel file on input, whose shape is very similar to the final question, with some additional syntax to describe the datasets, the display of the questions and the matlab variables names coding the inputs and outputs . From the info found in Excel file, the script prebuilds a MATLAB snippet that the user must complete to compute the correct answers to questions. From there the script creates N different cloze questions, coded in LaTeX following the syntax of the LaTeX "moodle" package (installed by default on most LaTeX distributions). The output LaTeX file must be then compiled with xelatex, and the output xml file is ready to be uploaded in moodle.
 
 ## Visuals
-Example images
+Below an example of Excel source file, and one resulting question.
 
 <img src="examples/airhumide/airhumide_en_Excel.png" alt="Excel source file example" width="400">
 <img src="examples/airhumide/airhumide_en_snapshot.png" alt="Resulting question" width="400">
