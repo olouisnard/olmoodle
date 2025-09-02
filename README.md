@@ -9,7 +9,7 @@ The main script takes an Excel file on input, whose shape is very similar to the
 ## Visuals
 Example images
 
-![Excel source file example](examples/airhumide/airhumide_en_Excel.png "icon")
+<img src="examples/airhumide/airhumide_en_Excel.png" alt="Excel source file example" width="400">
 
 ![Resulting question](examples/airhumide/airhumide_en_snapshot.png "icon")
 
