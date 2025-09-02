@@ -10,9 +10,7 @@ The main script takes an Excel file on input, whose shape is very similar to the
 Example images
 
 <img src="examples/airhumide/airhumide_en_Excel.png" alt="Excel source file example" width="400">
-
-![Resulting question](examples/airhumide/airhumide_en_snapshot.png "icon")
-
+<img src="examples/airhumide/airhumide_en_snapshot.png" alt="Resulting question" width="400">
 
 ## Installation
 You will generally install in a subpath of your personal main matlab folder (for example `/home/albert/matlab`), but it can be anywhere. Go to that directory and get the files. If you downloaded the code through git, you're ready to carry on. If you downloaded a .tgz archive, uncompress it here.
