@@ -10,17 +10,17 @@ The main script takes an Excel file on input, whose shape is very similar to the
 Example images (to be defined)
 
 ## Installation
-You will generally install in a subpath of your personal main matlab folder (for example /home/albert/matlab), but it can be anywhere. Go to that directory and get the files. If you downloaded the code through git, you're ready to carry on. If you downloaded a .tgz archive, uncompress it here.
+You will generally install in a subpath of your personal main matlab folder (for example `/home/albert/matlab`), but it can be anywhere. Go to that directory and get the files. If you downloaded the code through git, you're ready to carry on. If you downloaded a .tgz archive, uncompress it here.
 
-Now, you must say to matlab where are the olmoodle MATLAB scripts and functions. Let's admit you installed in /home/albert/matlab. 
+Now, you must say to matlab where are the olmoodle MATLAB scripts and functions. Let's admit you installed in `/home/albert/matlab`. 
 - open MATLAB
 - in the MATLAB main window go to the "HOME" tab
 - click on "set path"
-- in the appearing "Set path" window, click on "Add Folder"
-- travel through your folders and go to /home/albert/matlab/olmoodle/mfiles and click "Open".
+- in the appearing "Set path" window, click on "Add Folder"; travel through your folders and go to `/home/albert/matlab/olmoodle/mfiles` and click "Open".
+- reclick on "Add Folder" and also add `/home/albert/matlab/olmoodle/mfiles/utils` and click "Open".
 - in the "Set path" window click "Save"
 You should now have access to the code. In the matlab command window, type "`olmoodle_test`". If installation is correct, you should have the following answer:
-_OLMOODLE is here ! \n_
+_OLMOODLE is here ! _
 
 ## Usage
 - Create a void directory somewhere, and there create your Excel file, say "`myquestion.xls`"
