@@ -10,26 +10,27 @@ The main script takes an Excel file on input, whose shape is very similar to the
 Example images (to be defined)
 
 ## Installation
-You will generally install in a subpath of your personal main matlab folder (for example /home/louisnard/matlab), but it can be anywhere. 
-There is nothing else to do after downloading the git or. tgz archive. You must say to matlab where are the olmoodle MATLAB scripts and functions. Let's admit you installed in /hole/louisnard/matlab. 
+You will generally install in a subpath of your personal main matlab folder (for example /home/albert/matlab), but it can be anywhere. Go to that directory and get the files. If you downloaded the code through git, you're ready to carry on. If you downloaded a .tgz archive, uncompress it here.
+
+Now, you must say to matlab where are the olmoodle MATLAB scripts and functions. Let's admit you installed in /home/albert/matlab. 
 - open MATLAB
 - in the MATLAB main window go to the "HOME" tab
 - click on "set path"
 - in the appearing "Set path" window, click on "Add Folder"
-- travel through your folders and go to /home/louisnard/matlab/olmoodle/mfiles and click "Open".
+- travel through your folders and go to /home/albert/matlab/olmoodle/mfiles and click "Open".
 - in the "Set path" window click "Save"
-You should now have access to the code. In the matlab command window, type "olmoodle_test". If installation is correct, you should have the following answer:
+You should now have access to the code. In the matlab command window, type "`olmoodle_test`". If installation is correct, you should have the following answer:
 _OLMOODLE is here ! \n_
 
 ## Usage
-- Create a void directory somewhere, and there create your Excel file, say "myquestion.xls"
-- In MATLAB, go to that directory, and launch "olmoodle_main"
-- An input filename will be asked. Answer "myquestion.xls" (with extension). In the following calls, if any, the latter will be proposed by default.
+- Create a void directory somewhere, and there create your Excel file, say "`myquestion.xls`"
+- In MATLAB, go to that directory, and launch "`olmoodle_main`"
+- An input filename will be asked. Answer "`myquestion.xls`" **(with extension)**. In the following calls, if any, the latter will be proposed by default.
 - On the first run, if no errors are detected, you'll be informed that a mycode.m snippet program has been created, and it will be opened in MATLAB editor. The script is paused.
-- Fill the snippet code to program the correct answers to the questions. The comments in the snippet will guide you. Don't forget to use .*, ./ and .^ in multiplications, divisions and exponentiations.
-- Once you are done, clisk ENTER in the Command Window. The main sciprt will build the output LaTeX file "myquestion.tex".
-- In a terminal, or in your favorite LaTeX system type "xelatex myquestion"
-- A file "myquestion-moodle.xml" has been created. Import it into moodle. You're done !
+- Fill the snippet code to program the correct answers to the questions. The comments in the snippet will guide you. **Don't forget to use .*, ./ and .^ in multiplications, divisions and exponentiations**, respectively.
+- Once you are done, click ENTER in the Command Window. The main script will build the output LaTeX file "`myquestion.tex`".
+- In a terminal, or in your favorite LaTeX system type "`xelatex myquestion`"
+- A file "`myquestion-moodle.xml`" has been created. Import it into moodle. You're done !
 
 ## Support
 Contact me at olivier(dot)louisnard(at)mines-albi(dot)fr
@@ -37,10 +38,10 @@ Contact me at olivier(dot)louisnard(at)mines-albi(dot)fr
 ## Roadmap
 
 ## Contributing
-You can contribute to improve packaging and documentation.
+You can contribute to improve packaging, documentation, and internationalisation.
 
 ## License
-Open source, but still don't know in which way
+Open source, but still don't know in which way.
 
 ## Project status
 Starting...

@@ -128,14 +128,23 @@ Nombre de jeux de données erroné (ligne %d, je lis "%s").
 .error.VoidNSET
 Nombre de jeux de données erroné (ligne %d).
 
-.error.PointsNotInteger
-Les points doivent être des entiers positifs (ligne %d, je lis "%s").
-
 .error.PointsNotNumeric
 Les points doivent être numériques et entiers positifs (ligne %d, je lis "%s").
 
+.error.PointsNotInteger
+Les points doivent être des entiers positifs (ligne %d, je lis "%s").
+
+.error.PrecNotNumeric
+La précision doit être numérique et entière (ligne %d, je lis "%s").
+
+.error.PrecNotInteger
+La precision doit être un entier (ligne %d, je lis "%s").
+
+.error.PrecUnspecified
+Attention: précision ligne %d non spécifiée.
+
 .error.Found
-J'ai trouvé des erreurs. Corrigez le fichier Excel er relancez.
+J'ai trouvé des erreurs. Corrigez le fichier Excel et relancez-moi.
 
 
 words.Line

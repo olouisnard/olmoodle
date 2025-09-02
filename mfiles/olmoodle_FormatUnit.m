@@ -149,6 +149,7 @@ for n = 1 : numel (inds_start_alphanum)
     letterlatexfmt = ' \\mathrm{%s}' ;
   end
 
+
   % Treating the case of degree Fahrenheit similarly. Code is degF
   FAHRENHEIT = strcmp(lower(letter), 'degf') ;
   if FAHRENHEIT
@@ -172,6 +173,12 @@ for n = 1 : numel (inds_start_alphanum)
   PERCENT = strcmp(lower(letter), 'percent') ;
   if PERCENT
     letter = '\%' ;
+    letterlatexfmt = '%s' ;
+  end
+
+  SI = strcmp(lower(letter), 'degc') ;
+  if SI
+    letter = '\mathrm{SI}' ;
     letterlatexfmt = '%s' ;
   end
 

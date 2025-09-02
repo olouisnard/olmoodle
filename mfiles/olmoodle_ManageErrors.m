@@ -1,4 +1,4 @@
-% OLMOODLE_MANAGEERRRORS=:
+% OLMOODLE_MANAGEERRRORS:
 %
 % Assign tolerance
 
@@ -65,6 +65,26 @@ for ierr = 1:numel(errorstruct)
     fprintf (textstruct.error.PointsNotInteger{1}, ...
 	     errorstruct(ierr).line, ...
 	     errorstruct(ierr).string) ;
+    fprintf('\n')  ;
+
+   case errorcodes.PRECISION_NOT_NUMERIC
+
+    fprintf (textstruct.error.PrecNotNumeric{1}, ...
+	     errorstruct(ierr).line, ...
+	     errorstruct(ierr).string) ;
+    fprintf('\n')  ;
+
+   case errorcodes.PRECISION_NOT_INTEGER
+
+    fprintf (textstruct.error.PrecNotInteger{1}, ...
+	     errorstruct(ierr).line, ...
+	     errorstruct(ierr).string) ;
+    fprintf('\n')  ;
+
+   case errorcodes.PRECISION_UNSPECIFIED
+
+    fprintf (textstruct.error.PrecUnspecified{1}, ...
+	     errorstruct(ierr).line) ;
     fprintf('\n')  ;
 
     

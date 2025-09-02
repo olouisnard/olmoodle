@@ -3,6 +3,10 @@
 function [datastruct, genstruct, errorstruct, errorcodes] = ...
     olmoodle_ReadExcel (xlsfilename, textstruct)
 
+
+
+decim = @(x) x - floor(x) ;
+
 % ExcelColumnsStruct
 %----------------------------------------------------------------------
 % Column numbers in Excel file
@@ -37,6 +41,9 @@ errorcodes.POINTS_NOT_NUMERIC = 5 ;
 errorcodes.TOL_BADLY_SPECIFIED = 6 ; 
 errorcodes.TOL_UNSPECIFIED = 7 ; 
 errorcodes.TOL_IS_VOID = 9 ; 
+errorcodes.PRECISION_NOT_INTEGER = 10 ; 
+errorcodes.PRECISION_NOT_NUMERIC = 11 ; 
+errorcodes.PRECISION_UNSPECIFIED = 12 ; 
 
 %======================================================================
 %
@@ -94,9 +101,9 @@ while ~done
     switch code 
       
      case 'M'
-      %--------------------------------------------------
+      %============================================================
       % Moodle category to store questions
-      %--------------------------------------------------
+      %============================================================
       tmp = tabcells{ilin, CMOODLECAT} ; 
       if any(ismissing(tmp)) || isempty(tmp)
 	genstruct.moodlecategory = ' ' ;     	
@@ -105,9 +112,9 @@ while ~done
       end
      
      case 'H'
-      %--------------------------------------------------
+      %============================================================
       % Header (the title of generated question)
-      %--------------------------------------------------
+      %============================================================
       tmp = tabcells{ilin, CHEADER} ; 
       if any(ismissing(tmp)) || isempty(tmp)
 	genstruct.header = 'Numerical question' ;     	
@@ -116,9 +123,9 @@ while ~done
       end
      
      case 'N'
-      %--------------------------------------------------
+      %============================================================
       % Number of sets
-      %--------------------------------------------------
+      %============================================================
       tmp = tabcells{ilin, CNUMBEROFSET} ; 
       NSET_WAS_FOUND = 1 ;
 
@@ -136,9 +143,9 @@ while ~done
       end
       
      case 'Z'
-      %--------------------------------------------------
+      %============================================================
       % Tolerance
-      %--------------------------------------------------
+      %============================================================
       tmp = tabcells{ilin, CTOLERANCE} ;    
       TOL_WAS_FOUND = 1 ;
       
@@ -173,10 +180,12 @@ while ~done
 	 otherwise
 	end
       end
+     
+     
      case 'T'
-      %--------------------------------------------------
+      %============================================================
       % Pure text
-      %--------------------------------------------------
+      %============================================================
       iok = iok + 1 ;
       ktext = ktext + 1;
 
@@ -187,10 +196,12 @@ while ~done
 
       genstruct.lists.text(ktext) = iok ;
       
+     
+     
      case 'V'
-      %--------------------------------------------------
+      %============================================================
       % Input quantity variable in set
-      %--------------------------------------------------
+      %============================================================
       iok = iok + 1 ;
       kvar = kvar + 1;
  
@@ -207,18 +218,58 @@ while ~done
       datastruct(iok).props.matlab    = tabcells{ilin, CMATLAB} ;
       datastruct(iok).props.min       = tabcells{ilin, CMIN} ;
       datastruct(iok).props.max       = tabcells{ilin, CMAX} ;
-      datastruct(iok).props.precision = tabcells{ilin, CPREC} ;
       datastruct(iok).props.unit      = tabcells{ilin, CUNIT} ;
       datastruct(iok).props.format    = tabcells{ilin, CFORMAT} ;
       datastruct(iok).props.position  = iok ;
       datastruct(iok).props.opts = struct([]) ;
 
       genstruct.lists.varinput(kvar) = iok ;
+
+      %----------------------------------------
+      % Detect precision errors
+      %----------------------------------------
+      precision = tabcells{ilin, CPREC} ;
+
+      if any(ismissing(precision)) || isempty(precision)
+
+	nerrors = nerrors  + 1 ;
+
+	% Void precision field, we set to 0 by default. This is
+        % just a warning
+	  errorstruct(nerrors).code = errorcodes.PRECISION_UNSPECIFIED ;
+	  errorstruct(nerrors).line = ilin ;
+      
+      else
+	% Not void precision field...
+	if ~isnumeric(precision)
+	  % We test if not numeric
+	  nerrors = nerrors  + 1 ;
+	  errorstruct(nerrors).code = errorcodes.PRECISION_NOT_NUMERIC ;
+	  errorstruct(nerrors).line = ilin ;
+	  errorstruct(nerrors).string = precision ;
+	  
+	else
+	  % OK, precision field is indeed a number.
+	  % We test if integer
+	  if decim(precision) == 0 
+	    % OK it's integer, assign precision in datastruct
+	    
+	    datastruct(iok).props.precision = precision ;
+
+	  else
+	    % It's not integer : error
+	    nerrors = nerrors  + 1 ;
+	    errorstruct(nerrors).code = errorcodes.PRECISION_NOT_INTEGER ;
+	    errorstruct(nerrors).line = ilin ;
+	    errorstruct(nerrors).string = num2str(precision) ;
+	  end
+	end 
+      end
       
      case 'F'
-      %--------------------------------------------------
+      %============================================================
       % Input quantity fixed in set
-      %--------------------------------------------------
+      %============================================================
       iok = iok + 1 ;
       kfixed = kfixed + 1;
 
@@ -242,9 +293,9 @@ while ~done
       genstruct.lists.fixedinput(kfixed) = iok ;
 
      case 'C'
-      %--------------------------------------------------
+      %============================================================
       % Calculated quantity fixed in set
-      %--------------------------------------------------
+      %============================================================
       iok = iok + 1 ;
       kcalc = kcalc + 1 ;
 
@@ -267,9 +318,9 @@ while ~done
       genstruct.lists.calc(kcalc) = iok ;
       
      case {'Q', 'Q*'}
-      %--------------------------------------------------
+      %============================================================
       % Question
-      %--------------------------------------------------
+      %============================================================
       iok = iok + 1 ;
       kquestion = kquestion + 1 ;
       
@@ -294,9 +345,9 @@ while ~done
 	datastruct(iok).props.opts.DisplayLatexName = 0 ;
       end
       
+      %----------------------------------------
       % Examine if point field is correct
-      decim = @(x) x - floor(x) ;
-
+      %----------------------------------------
       points = tabcells{ilin, CPOINTS} ;
 
       if any(ismissing(points)) || isempty(points)
@@ -314,7 +365,7 @@ while ~done
 	else
 	  % OK, points field is indeed a number.
 	  % We test if integer
-	  if decim(points) == 0 
+	  if decim(points) == 0 && points > 0
 	    % OK it's integer, assign points in datastruct
 	    datastruct(iok).props.points = points ;
 	  else

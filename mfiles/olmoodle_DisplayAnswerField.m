@@ -128,7 +128,7 @@ switch formattype
   
  case 'none'
   % NONE
-  tmp=0;
+  tmp = 0;
  otherwise
 end
 
