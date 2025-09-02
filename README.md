@@ -35,7 +35,7 @@ _OLMOODLE is here ! _
 - In a terminal, or in your favorite LaTeX system type "`xelatex myquestion`"
 - A file "`myquestion-moodle.xml`" has been created. Import it into moodle. You're done !
 
-<img src="doc/Workflow-eps-converted-to.pdf" alt="Workflow" width="700">
+<img src="doc/Workflow_png.png.pdf" alt="Workflow" width="700">
 
 ## Support
 Contact me at olivier(dot)louisnard(at)mines-albi(dot)fr
