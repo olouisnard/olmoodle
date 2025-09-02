@@ -28,11 +28,9 @@ if CREATE_MYCODE
   fprintf(fidmycode, '%% -*- coding: utf-8 -*-\n\n') ;
   WriteTextBlocks( fidmycode,  textstruct.mycode.info_inputs, replacements) ;
   
-  %======================================================================  
-  %
-  % Matlab assignments lines for fixed data
-  %
-  %======================================================================  
+%----------------------------------------------------------------------
+% Matlab assignments lines for fixed data
+%----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_fixedinputs, replacements) ;
   
   for k = 1 : numel(genstruct.lists.fixedinput)
@@ -43,11 +41,9 @@ if CREATE_MYCODE
 
   fprintf( fidmycode, '\n') ;
   
-%======================================================================  
-%
+%----------------------------------------------------------------------
 % Matlab assignments lines for varying data
-%
-%======================================================================  
+%----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_varinputs, replacements) ;
 
   for k = 1 : numel(genstruct.lists.varinput)
@@ -59,30 +55,37 @@ if CREATE_MYCODE
   
   fprintf( fidmycode, '\n\n\n') ;
 
-  WriteTextBlocks(fidmycode, textstruct.mycode.info_outputs, replacements) ;
 
+  %======================================================================  
+  %
+  % Writing info for calculated and output variables
+  %
+  %======================================================================  
+  %----------------------------------------------------------------------
+  % General header comment
+  %----------------------------------------------------------------------
+  WriteTextBlocks(fidmycode, textstruct.mycode.info_commentoutputs, replacements) ;
+
+  %----------------------------------------------------------------------
+  % Matlab assignments lines for calculated inputs
+  %----------------------------------------------------------------------
+  WriteTextBlocks(fidmycode, textstruct.mycode.info_calcinputs, replacements) ;
   
-%======================================================================  
-%
-% Matlab assignments lines for calculated inputs
-%
-%======================================================================  
   for k = 1 : numel(genstruct.lists.calc)
     n = genstruct.lists.calc(k) ;
-
+    
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
     fprintf( fidmycode, '%% %s\n', datastruct(n).props.text) ;
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
     
     fprintf( fidmycode, '%s = zzz ; \n\n', datastruct(n).props.matlab ) ;      
   end
+  
 
-
-%======================================================================  
-%
+  %----------------------------------------------------------------------
   % Matlab assignment lines for answers to questions
-%
-%======================================================================  
+  %----------------------------------------------------------------------
+  WriteTextBlocks(fidmycode, textstruct.mycode.info_outputs, replacements) ;
   for k = 1 : numel(genstruct.lists.question)
     n = genstruct.lists.question(k) ;
     
@@ -95,7 +98,9 @@ if CREATE_MYCODE
 
   fclose(fidmycode) ;
 
+  %----------------------------------------------------------------------
   % Displays message stating that file has been created.
+  %----------------------------------------------------------------------
   WriteTextBlocks (1, textstruct.message.SepLine) ;
   WriteTextBlocks (1, textstruct.message.UserCodeCreated) ;
   WriteTextBlocks (1, textstruct.message.SepLine) ;

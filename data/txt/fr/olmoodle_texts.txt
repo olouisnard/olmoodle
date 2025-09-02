@@ -1,0 +1,171 @@
+.mycode.info_inputs
+%######################################################################
+%
+% Les variables suivantes seront pré-définies lorsque ce code sera
+% appelé. Elles seront remplies à partir des données que vous avez
+% spécifiées dans votre fichier Excel
+%
+%######################################################################
+%
+
+.mycode.info_fixedinputs
+%======================================================================
+% Données d'entrée fixes (identiques pour tous les élèves)
+% Ce sont les donnnées correspondant au code 'F' de votre fichier Excel
+%======================================================================
+
+.mycode.info_varinputs
+%======================================================================
+% Données d'entrée variables (différentes d'un élève à l'autre)
+% Ce sont les donnnées correspondant au code 'V' de votre fichier Excel
+%======================================================================
+
+.mycode.info_commentoutputs
+%######################################################################
+%
+% Vous devez modifier les lignes suivantes (en remplaçant zzz par vos
+% propres calculs)
+%
+% C'est ici que vous devez :
+%
+%  . calculer les données d'entrée secondaires (code 'C' dans votre
+%     fichier Excel) à partir des données d'entrées (listées
+%     ci-dessus), 
+%
+%  . calculer les bonnes réponses aux questions (code 'Q' dans votre
+%     fichier Excel) à partir des données d'entrées (listées
+%     ci-dessus).
+%
+% Bien sûr, en général, vous aurez besoin d'autres variables
+% intermédiaires pour conduire vos calcul proprement. Vous êtes libres
+% de tout écrire, dans la limite de la syntaxe MATLAB.
+%
+%
+% IMPORTANT : puisqu'il y a plusieurs jeux de données, toutes les
+% variables ci-dessous doivent être des vecteurs de valeurs, chaque
+% élément du vecteur correspondant à un jeu de donnée.  Si vous êtes
+% familiers avec MATLAB, vous êtes habitués. Sinon, c'est facile il
+% vous suffit d'utiliser systématiquement les opérateurs :
+
+%   .* au lieu de * pour multiplier
+%   ./ au lieu de / pour diviser
+%   .^ au lieu de ^ pour exposant
+%
+% Pour l'addition et la soustraction c'est classiquement + et -.
+%
+% Souvent, si vous avez déjà traité l'exercice dans matlab, il
+% vous suffira de recopier les lignes de votre fichier matlab
+% existant, avec quelques adaptations.
+%
+%######################################################################
+%
+
+.mycode.info_calcinputs
+%======================================================================
+% Données d'entrée calculées 
+% Ce sont les donnnées correspondant au code 'C' de votre fichier Excel
+%======================================================================
+
+.mycode.info_outputs
+%======================================================================
+% Données demandées à l'étudiant
+% Ce sont les donnnées correspondant au code 'Q' de votre fichier Excel
+%======================================================================
+
+.message.CreateUserCode
+Creation fichier MATLAB utilisateur...
+
+.message.UserCodeCreated
+Je viens de créer mycode.m et je l'ouvre dans l'éditeur. Vous devrez
+l'éditer, soit maintenant, soit plus tard pour relier les réponses aux
+données d'entrée. Si vous l'éditez plus tard, vous devrez relancer 
+ce programme.
+
+.message.ExecUserCode
+Exécution fichier MATLAB utilisateur...
+
+.message.ReadExcelFile
+Lecture fichier Excel...
+
+.message.CreateDataSets
+Création des jeux de données...
+
+.message.InitLatexFile
+Création fichier LaTeX de sortie
+
+.message.WriteLatexFile
+Écriture fichier LaTeX de sortie
+
+.message.YouCanCompile
+Si votre fichier mycode.m était prêt, vous pouvez maintenant compiler 
+votre quiz en tapant : 
+
+.message.LaunchMeAgain
+Sinon, avant de compiler, finalisez-le , puis relancez-moi avant, en
+tapant ENTREE à toutes les questions.
+
+.message.Dataset
+Jeu de données
+
+.message.PressEnter
+Appuyez sur ENTREE pour continuer...
+
+.message.AskFileName
+Nom fichier Excel (tapez * pour voir tout)
+
+.message.SepLine
+----------------------------------------------------------------------
+
+.question.CreateMyCode
+   J'ai trouvé un fichier mycode.m existant... Je le recrée ? O/[N] : 
+
+
+.answer.yes
+O
+o
+
+.answer.no
+N
+n
+   
+.error.UnspecifiedTOL
+Tolérance non spécifiée.
+ 
+.error.BadTOL
+La tolérance doit être numérique (ligne %d, je lis "%s").
+
+.error.VoidTOL
+Tolérance non spécifiée (ligne %d).
+
+.error.WrongCode
+Code erroné (ligne %d, je lis "%s").
+
+.error.UnspecifiedNSET
+Nombre de jeux de données non spécifié.
+
+.error.BadNSET
+Nombre de jeux de données erroné (ligne %d, je lis "%s").
+
+.error.VoidNSET
+Nombre de jeux de données erroné (ligne %d).
+
+.error.PointsNotNumeric
+Les points doivent être numériques et entiers positifs (ligne %d, je lis "%s").
+
+.error.PointsNotInteger
+Les points doivent être des entiers positifs (ligne %d, je lis "%s").
+
+.error.PrecNotNumeric
+La précision doit être numérique et entière (ligne %d, je lis "%s").
+
+.error.PrecNotInteger
+La precision doit être un entier (ligne %d, je lis "%s").
+
+.error.PrecUnspecified
+Attention: précision ligne %d non spécifiée.
+
+.error.Found
+J'ai trouvé des erreurs. Corrigez le fichier Excel et relancez-moi.
+
+words.Line
+ligne

@@ -27,7 +27,7 @@ textstruct = olmoodle_ReadTexts (pathstruct.TextsFilename) ;
 % ====================================================================== 
 
 % Ask for Excel filename
-xlsfilename = askfilename( {'.xlsx','.xls'}, 1, 'Nom fichier Excel') ;
+xlsfilename = askfilename( {'.xlsx','.xls'}, 1, textstruct.message.AskFileName{1}) ;
 
 WriteTextBlocks(1, textstruct.message.ReadExcelFile) ;
 

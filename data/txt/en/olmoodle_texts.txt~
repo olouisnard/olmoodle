@@ -97,7 +97,7 @@ Writing LaTeX output file
 If your mycode.m file was ready, you can now compile your quiz by typesetting: 
 
 .message.LaunchMeAgain
-Otherwise, before compiling, finalize it and launch me again, pressing ENTER to
+Otherwise, finalize it, and launch me again before, pressing ENTER to
 all questions.
 
 .message.Dataset
@@ -106,14 +106,11 @@ Data set
 .message.PressEnter
 Press ENTER to continue...
 
-.message.AskFileName
-Excel file name (enter * to see all)
-
 .message.SepLine
 ----------------------------------------------------------------------
 
 .question.CreateMyCode
-I found an existing mycode.m file... Should I erase it ? Y/[N] : 
+I found an existing mycode.m file... Should I erase it ? O/[N] : 
 
 .answer.yes
 Y

@@ -1,11 +1,24 @@
-%======================================================================
-%
-% Les variables suivantes seront pré-définies lorsque ce code  
-% sera appelé 
-%
-%======================================================================
-% efilm_mm	:	Épaisseur film
+% -*- coding: utf-8 -*-
 
+%######################################################################
+%
+% The following variables will be pre-defined when this code will be
+% executed. They will be fed with the data you specified in your Excel
+% source file
+%
+%######################################################################
+%
+%======================================================================
+% Fixed input data (identical for all students)
+% These are the data corresponding to 'F' code in your Excel file.
+%======================================================================
+% patm	:	Pression atmosphérique
+% efilm_mm	:	On donne l'épaisseur du film d'eau à la surface du fruit
+
+%======================================================================
+% Variable input data (different from one student to the other)
+% These are the data corresponding to 'V' code in your Excel file.
+%======================================================================
 % Dcm	:	Diamètre
 % Tcels	:	Température
 % psipercent	:	Humidité relative
@@ -13,74 +26,101 @@
 
 
 
+%######################################################################
+%
+% You must modify the folllowing executable lines (replacing zzz by
+% your own computations)
+%
+% Ti is here that you must
+%
+%  . compute the secondary input data ('C' code in your Excel
+%     file) in function of the inputs (listed above).
+%
+%  . compute the correct answers to questions ('Q' code in your 
+%     Excel file) in function of the inputs (listed above).
+%
+% Of course, generally, you will need other intermediate variables to
+% manage your computations in a clean manner. You are free to write
+% anything, within the limits of MATLAB syntax.
+%
+%
+% IMPORTANT : since there are several datasets, all the variables
+% manipulated below are vectors, each element of the vector
+% corresponding to a single dataset If you are familiar with MATLAB,
+% you are used to this. Otherwise, it's easy, all you have to know is
+% that you should use systematically the following operators:
+%   .* instead of * to multiply
+%   ./ instead of / to divide
+%   .^ instead of ^ to exponentiate
+%
+% To add or substract, use classically the operators + and -.
+%
+% Often, if you already have programmed your exercise solution in
+% MATLAB before using this tool, you will just have to copy the lines
+% of your existing MATLAB file, with some marginal adaptations.
+%
+%######################################################################
+%
+%======================================================================
+% Calculated input data 
+% These are the data corresponding to code 'C' in your Excel file.
+%======================================================================
+%----------------------------------------------------------------------
+% Pression de valeur saturante de l’eau à la température donnée
+%----------------------------------------------------------------------
+psat = zzz ; 
+
+%----------------------------------------------------------------------
+% Coefficient de diffusion air/vapeur d’eau
+%----------------------------------------------------------------------
+DAV = zzz ; 
+
+%----------------------------------------------------------------------
+% Viscosité cinématique de l’air
+%----------------------------------------------------------------------
+nu = zzz ; 
 
 %======================================================================
-%
-% Vous devez modifier les lignes suivantes
-%
+% Answers asked to student
+% These are the data corresponding to code 'Q' in your Excel file.
 %======================================================================
-load LennardJonesData
+%----------------------------------------------------------------------
+% Nombre de Reynolds
+%----------------------------------------------------------------------
+Re = zzz ; 
 
+%----------------------------------------------------------------------
+% Nombre de Schmidt
+%----------------------------------------------------------------------
+Sc = zzz ; 
 
-Rgp = 8.314 ;
-patm = 101325 ;
-T = Tcels + 273.15 ;
-efilm = efilm_mm / 1e3 ;
+%----------------------------------------------------------------------
+% Nombre de Sherwood
+%----------------------------------------------------------------------
+Sh = zzz ; 
 
+%----------------------------------------------------------------------
+% Coefficient d'échange
+%----------------------------------------------------------------------
+km = zzz ; 
 
-psi = psipercent / 100 ;
-D = Dcm / 100 ;
-MH2O = 18e-3 ;
-rhoeau = 1e3 ;
+%----------------------------------------------------------------------
+% Concentration en vapeur à la surface
+%----------------------------------------------------------------------
+Cvsurf = zzz ; 
 
-% ----------------------------------------------------------------------
-% Pression de vapeur saturante
-% ----------------------------------------------------------------------
-psat = psath2o (T) ;
+%----------------------------------------------------------------------
+% Concentration en vapeur incidente
+%----------------------------------------------------------------------
+Cvinf = zzz ; 
 
-% ----------------------------------------------------------------------
-% Calcul coefficients de diffusion, viscosités, densité
-% ----------------------------------------------------------------------
-p_in_atm = patm / 101325 ;
- 
-DAV = DABChapman_Enskog (T, p_in_atm, ...
-			 LJdata.Air.M, LJdata.Water.M, ...
-			 LJdata.Air.epssurk, LJdata.Water.epssurk, ...
-			 LJdata.Air.sigma, LJdata.Water.sigma ) ;
+%----------------------------------------------------------------------
+% Flux massique d'évaporation
+%----------------------------------------------------------------------
+mpointv = zzz ; 
 
-mu = muChapman_Enskog (T, ...
-		       LJdata.Air.M, ...
-		       LJdata.Air.epssurk, ...
-		       LJdata.Air.sigma) ;
+%----------------------------------------------------------------------
+% Calculez le temps total d'évaporation
+%----------------------------------------------------------------------
+tau = zzz ; 
 
-rho = patm .* (LJdata.Air.M /1000) ./ (Rgp * T) ;
-nu = mu ./ rho ;
-
-% ----------------------------------------------------------------------
-% Nombres adimensionnels
-% ----------------------------------------------------------------------
-Re = Uinf .* D ./ nu ;
-Sc = nu ./ DAV ;
-Sh = 2 + ( 0.4 * Re.^(1/2) + 0.06 * Re.^(2/3) ) .* Sc.^0.4 ;
-
-% ----------------------------------------------------------------------
-% Coefficient de transfert convectif
-% ----------------------------------------------------------------------
-km = Sh .* DAV ./ D ;
-
-% ----------------------------------------------------------------------
-% Concentrations en vapeur d'eau
-% ----------------------------------------------------------------------
-Csat = psat ./ (Rgp .* T) ;
-Cvsurf = Csat ;
-Cvinf  = Csat .* psi ;
-
-% ----------------------------------------------------------------------
-% Flux
-% ----------------------------------------------------------------------
-mpointv = km .* pi.*D.^2 .* (Cvsurf - Cvinf) * MH2O ;
-
-% ----------------------------------------------------------------------
-% Flux
-% ----------------------------------------------------------------------
-tau = rhoeau .* efilm ./ (km .* (Cvsurf - Cvinf) * MH2O) ;
