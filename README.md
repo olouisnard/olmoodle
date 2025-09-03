@@ -24,6 +24,8 @@ Now, you must say to matlab where are the olmoodle MATLAB scripts and functions.
 You should now have access to the code. In the matlab command window, type "`olmoodle_test`". If installation is correct, you should have the following answer:
 _OLMOODLE is here ! _
 
+You can change the current language used in OLMOODLE. To do so, run "`olmoodle_lang`". The list of currently available languages will be proposed. Select the desired one.
+
 ## Usage
 - Create a void directory somewhere, and there create your Excel file, say "`myquestion.xls`"
 - In MATLAB, go to that directory, and launch "`olmoodle_main`"
