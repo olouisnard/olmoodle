@@ -109,6 +109,12 @@ Press ENTER to continue...
 .message.AskFileName
 Excel file name (enter * to see all)
 
+.message.Lang
+You should see this message in the language you chose.
+
+.message.OLmoodleIsHere
+OLMoodle is here !
+
 .message.SepLine
 ----------------------------------------------------------------------
 

@@ -1,7 +1,18 @@
 % OLMOODLE_GETPATHS:
 %
 % Determine where is the root installation path, and from there,
-% the location of data path
+% the location of the data path, and what's inside.
+%
+% On input:
+%
+% On output:
+%
+% out : a structure with fields:
+%   InstallPath: the root installation path 
+%   DataPath: the path for data (txt and tex) used by the software 
+%   StartFilename: the name of the .tex file used to initiate the output
+%   TextsFilename: the name of the .txt file containing all
+%          messages, errors, matlab comments etc.
 
 function out = olmoodle_GetPaths ()
 

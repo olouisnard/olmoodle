@@ -113,6 +113,12 @@ Appuyez sur ENTREE pour continuer...
 .message.AskFileName
 Nom fichier Excel (tapez * pour voir tout)
 
+.message.Lang
+Vous devriez voir ce message dans la langue que vous avez choisie.
+
+.message.OLmoodleIsHere
+OLMoodle est bien installé !
+
 .message.SepLine
 ----------------------------------------------------------------------
 
