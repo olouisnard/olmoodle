@@ -19,9 +19,8 @@ Now, you must say to matlab where are the olmoodle MATLAB scripts and functions.
 - open MATLAB
 - in the MATLAB main window go to the "HOME" tab
 - click on "set path"
-- in the appearing "Set path" window, click on "Add Folder"; travel through your folders and go to `/home/albert/matlab/olmoodle/mfiles` and click "Open".
-- reclick on "Add Folder" and in a similar manner, add `/home/albert/matlab/olmoodle/mfiles/utils`.
-- in the "Set path" window click "Save"
+- in the appearing "Set path" window, click on "Add with Subfolders"; travel through your folders and go to `/home/albert/matlab/olmoodle/mfiles` and click "Open".
+- then, in the "Set path" window, click "Save" and "Close".
 You should now have access to the code. In the matlab command window, type "`olmoodle_test`". If installation is correct, you should have the following answer:
 _OLMOODLE is here ! _
 
