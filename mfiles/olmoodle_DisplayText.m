@@ -1,6 +1,6 @@
 % OLMOODLE_DISPLAYTEXT
 %
-% Displays a test.%
+% Displays a text.
 % Usage :
 %
 % function out = out = olmoodle_DisplayText (fid, sentence)

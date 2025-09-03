@@ -1,4 +1,38 @@
-
+% OLMOODLE_EXECMYCODE :
+%
+% Executes the user snippet code. 
+%
+% Before the variables constituted by the fields of myins (the latter
+% are all input data, fixed or variable) are copied in simple variable
+% names, to allow the user to manipulate the symbol as he wrote them
+% in his/her Excel file. For example if the user declared a input
+% data named "time", the operation 
+%       time = myins.time 
+% is performed.
+%
+% Afterwards the opposite is done for calculated and answer
+% variables. the user output variables are affected in fields of
+% myout. If the user declared a variable "flux", the operation
+%       myouts.flux = flux 
+% is performed
+%
+% Both are done by using the eval function, which is strongly
+% discouraged for security reasons. Whether there is indeed a
+% security fail here remains yet obscure for me...
+%
+% Usage:
+%     myouts = olmoodle_ExecMyCode (genstruct, datastruct, myins) 
+%
+% On input:
+%    genstruct: the general data structure
+%    datastruct: the Excel data structure
+%    myins: a structure with one field per input variable declared
+%    by the user.
+%
+% On output:
+%    myouts: a structure with one field per input variable declared
+%    by the user. The min and max of each answer variable is a lso
+%    computed in myouts.(variable).min and myouts.(variable).max
 
 function myouts = olmoodle_ExecMyCode (genstruct, datastruct, myins) 
 

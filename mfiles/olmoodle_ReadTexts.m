@@ -1,10 +1,33 @@
 % OLMOODLE_READTEXTS:
 %
-% Reads all text blocks and messages used in the program
+% Reads all text blocks and messages used in the program. The
+% latter must be coded in a text file structured by blocks like:
+%
+% .category.messagecode
+% Text line 1 
+% Text line 2
+% |
+% Text line N
+%
+% The blocks must be separated by blank lines. 
+%
+% On input:
+%
+% filename: the name of the text file to read
+%
+% On output:
+%
+% textstruct: a structure formatted such that 
+%    textstruct.category.messagecode 
+% contains the text bloc:
+%
+% Text line 1 
+% Text line 2
+% |
+% Text line N
+function textstruct = olmoodle_ReadTexts (filename)
 
-function out = olmoodle_ReadTexts (filename)
-
-out = struct() ;
+textstruct = struct() ;
 
 %========================================
 % Open file as read only
@@ -38,8 +61,8 @@ while ~feof(fid)   % While not end of file
       strarray{messlinenumber} = line ; 
     end
   else
-    % Here we have read a block and we must store it into out.aaa.bbb
+    % Here we have read a block and we must store it into textstruct.aaa.bbb
     fields = split(thefieldsname, '.') ;   
-    out.(fields{1}).(fields{2}) = strarray ;
+    textstruct.(fields{1}).(fields{2}) = strarray ;
   end
 end
