@@ -137,6 +137,9 @@ La tolérance doit être numérique (ligne %d, je lis "%s").
 .error.VoidTOL
 Tolérance non spécifiée (ligne %d).
 
+.error.BadUnitTOL
+L'unité de la tolérance est incorrecte (ligne %d, je lis "%s"). \n Laissez vide ou indiquez "percent".
+
 .error.WrongCode
 Code erroné (ligne %d, je lis "%s").
 

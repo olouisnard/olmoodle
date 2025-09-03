@@ -1,4 +1,7 @@
-
+% OLMOODLE_GETPATHS:
+%
+% Determine where is the root installation path, and from there,
+% the location of data path
 
 function out = olmoodle_GetPaths ()
 

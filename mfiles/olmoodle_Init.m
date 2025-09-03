@@ -7,11 +7,12 @@
 %
 %
 % Usage: 
-% fid = olmoodle_Init (OutputFile, TO_FILE_FLAG, QuestionCategory, StartFilename)
+%     fid = olmoodle_Init (OutputFile, TO_FILE_FLAG, ...
+%           QuestionCategory, StartFilename)
 %
 % On input :
 %  OutputFile : 
-%      fFull name of the output file. This is the same basename
+%      Full name of the output file. This is the same basename
 %      as the Excel source file, with extension .tex.
 %
 %  TO_FILE_FLAG (optional): 
@@ -26,6 +27,11 @@
 %        If omitted or void, the default category is OLMoodle
 %
 % StartFilename: the name of the LaTeX template start file.
+%
+% On ouput :
+%  fid : 
+%      The file handler of the output LaTeX file
+
 
 function fid = olmoodle_Init (OutputFile, ...
 			      TO_FILE_FLAG, ...

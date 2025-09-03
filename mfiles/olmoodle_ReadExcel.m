@@ -44,6 +44,7 @@ errorcodes.TOL_IS_VOID = 9 ;
 errorcodes.PRECISION_NOT_INTEGER = 10 ; 
 errorcodes.PRECISION_NOT_NUMERIC = 11 ; 
 errorcodes.PRECISION_UNSPECIFIED = 12 ; 
+errorcodes.TOL_BAD_UNIT = 13 ; 
 
 %======================================================================
 %
@@ -149,20 +150,25 @@ while ~done
       %============================================================
       % Tolerance
       %============================================================
-      tmp = tabcells{ilin, CTOLERANCE} ;    
+      tolstr = tabcells{ilin, CTOLERANCE} ;    
       TOL_WAS_FOUND = 1 ;
       
-      if  any(ismissing(tmp))
+      %----------------------------------------
+      % Examine if tolerance is correct
+      %----------------------------------------
+      if  any(ismissing(tolstr)) 
+	% Tolerance is void
 	nerrors = nerrors  + 1 ;
 	errorstruct(nerrors).code = errorcodes.TOL_IS_VOID ;
 	errorstruct(nerrors).line = ilin ;
-      elseif ~isnumeric(tmp)
+      elseif ~isnumeric(tolstr)
+	% Tolerance is not numeric
 	nerrors = nerrors  + 1 ;
 	errorstruct(nerrors).code = errorcodes.TOL_BADLY_SPECIFIED ;
 	errorstruct(nerrors).line = ilin ;
-	errorstruct(nerrors).string = tmp ;
+	errorstruct(nerrors).string = tolstr ;
       else
-	
+	% Tolerance is OK
 	iok = iok + 1 ;
 	datastruct(iok).type           = 'tol' ;
 	datastruct(iok).props.text     = tabcells{ilin, CTEXT} ;
@@ -173,17 +179,43 @@ while ~done
 
 	genstruct.lists.tol = iok ;
 	
-	switch datastruct(iok).props.unit
-	 case 'percent' 
-	  genstruct.tolpercent = datastruct(iok).props.value ;
-	  genstruct.tol = genstruct.tolpercent / 100 ;
-	 case '' 
+	%----------------------------------------
+	% Examine if unit of tolerance is correct
+	%----------------------------------------
+	tolunitstr = datastruct(iok).props.unit ;
+
+	
+	if isempty(tolunitstr) || any(ismissing(tolunitstr))   % Tolerance unit field is void
+        % Tolerance should be understood as is
 	  genstruct.tol = datastruct(iok).props.value ;
 	  genstruct.tolpercent = genstruct.tol * 100 ;
-	 otherwise
+
+	else % Tolerance unit field is not void...
+
+	  % ... determine if it is blank 
+	  TOLUNITSTR_IS_BLANK = isempty( regexp(tolunitstr, '\S') ) ;
+
+	  if TOLUNITSTR_IS_BLANK
+	    % If blank, tolerance should be understood as is
+	    genstruct.tol = datastruct(iok).props.value ;
+	    genstruct.tolpercent = genstruct.tol * 100 ;
+	    
+	    
+	  elseif StringInsideBlanks(lower(tolunitstr), 'percent')
+	    % Check if contains 'percent', possibly enclosed within
+	    % blank-like characters
+	    genstruct.tolpercent = datastruct(iok).props.value ;
+	    genstruct.tol = genstruct.tolpercent / 100 ;
+	    
+	  else
+	    % Otherwise error
+	    nerrors = nerrors  + 1 ;
+	    errorstruct(nerrors).code = errorcodes.TOL_BAD_UNIT ;
+	    errorstruct(nerrors).line = ilin ;
+	    errorstruct(nerrors).string = datastruct(iok).props.unit ;
+	  end
 	end
       end
-     
      
      case 'T'
       %============================================================

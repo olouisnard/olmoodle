@@ -47,6 +47,13 @@ for ierr = 1:numel(errorstruct)
 	     errorstruct(ierr).string) ;
     fprintf('\n')  ;
     
+   case errorcodes.TOL_BAD_UNIT
+    
+    fprintf (textstruct.error.BadUnitTOL{1}, ...
+	     errorstruct(ierr).line, ...
+	     errorstruct(ierr).string) ;
+    fprintf('\n')  ;
+    
    case errorcodes.TOL_IS_VOID
     
     fprintf (textstruct.error.VoidTOL{1}, ...
