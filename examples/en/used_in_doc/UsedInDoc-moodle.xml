@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a question bank made for Moodle -->
+<!-- It was generated on 2025-09-02 13:11 by XeLaTeX running -->
+<!-- on *NIX with the package moodle v1.0 (2023/01/28) -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/ </text>
+  </category>
+</question>
+ 
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Fruit drying]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>A spherical fruit of diameter \(D\), whose surface is wet, is dried by an airflow at temperature \(T_\infty \), relative humidity \(\psi \), and velocity \(U_\infty \). <BR/>We want to compute the evaporation rate of the water film at the fruit surface. <BR/><BR/><BR/>You will use the following data <BR/><BR/><BR/>Diameter \(D = 4.0\, \mathrm {cm} \) <BR/>Temperature \(T = 34.0\, \mathrm {^\circ \mathrm {C}} \) <BR/>Relative humidity \(\psi = 35.\, \% \) <BR/>Velocity \(U_\infty = 9.2\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Atmospheric pressure \(p_{\text {atm}} = 101300.\, \mathrm {Pa} \) <BR/>Water saturation pressure at given temperature \(p_{\text {sat}}(T) = 5324.\, \mathrm {SI} \) <BR/>Diffusion coefficient \(D_{AV} = 2.65 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Kinematic viscosity of air \(\nu = 1.63 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>These data are personal <BR/><BR/><BR/>Compute the quantities below. The correlation used must <B>involve the Schmidt number</B>. <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(5.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/><BR/><BR/>Reynolds number : \(\text {Re} = \) {1:NUMERICAL:=2.2519226199e+04:1.1259613099e+03}\(\,\) \( \quad (22510. \, \rightarrow \, 41650.) \) <BR/>Schmidt number : \(\text {Sc} = \) {1:NUMERICAL:=6.1577028085e-01:3.0788514043e-02}\(\,\) \( \quad ( 6.13 \, 10^{-1} \, \rightarrow \, 6.16 \, 10^{-1} ) \) <BR/>Sherwood number : \(\text {Sh} = \) {2:NUMERICAL:=9.0854257730e+01:4.5427128865e+00}\(\,\) \( \quad (90. \, \rightarrow \, 128.) \) <BR/>Mass transfer coefficient : \(k_m = \) {1:NUMERICAL:=6.0278290072e-02:3.0139145036e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 4.52 \, 10^{-2} \, \rightarrow \, 6.03 \, 10^{-2} ) \) <BR/>Vapor concentration at the fruit surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=2.0851412530e+00:1.0425706265e-01}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (2.08 \, \rightarrow \, 3.45) \) <BR/>Incident vapor concentration : \(C_{V, \infty } = \) {2:NUMERICAL:=7.2979943855e-01:3.6489971927e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.72 \, \rightarrow \, 1.14) \) <BR/>Incident vapor concentration : {2:NUMERICAL:=7.2979943855e-01:3.6489971927e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.72 \, \rightarrow \, 1.14) \) <BR/>Massic evaporation rate : \(\dot {m}_V = \) {1:NUMERICAL:=7.3918325783e-06:3.6959162891e-07}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 7.39 \, 10^{-6} \, \rightarrow \, 3.79 \, 10^{-5} ) \) <BR/><BR/><BR/>The initial film thickness at the fruit surface is assumed to be \(e = 1.0\, \mathrm {mm} \) <BR/>Compute the total evaporation time : {2:NUMERICAL:=6.8001381153e+02:3.4000690576e+01}\(\, \mathrm {s}\) \( \quad (530. \, \rightarrow \, 680.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Fruit drying]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>A spherical fruit of diameter \(D\), whose surface is wet, is dried by an airflow at temperature \(T_\infty \), relative humidity \(\psi \), and velocity \(U_\infty \). <BR/>We want to compute the evaporation rate of the water film at the fruit surface. <BR/><BR/><BR/>You will use the following data <BR/><BR/><BR/>Diameter \(D = 8.0\, \mathrm {cm} \) <BR/>Temperature \(T = 44.0\, \mathrm {^\circ \mathrm {C}} \) <BR/>Relative humidity \(\psi = 33.\, \% \) <BR/>Velocity \(U_\infty = 9.0\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Atmospheric pressure \(p_{\text {atm}} = 101300.\, \mathrm {Pa} \) <BR/>Water saturation pressure at given temperature \(p_{\text {sat}}(T) = 9111.\, \mathrm {SI} \) <BR/>Diffusion coefficient \(D_{AV} = 2.82 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Kinematic viscosity of air \(\nu = 1.73 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>These data are personal <BR/><BR/><BR/>Compute the quantities below. The correlation used must <B>involve the Schmidt number</B>. <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(5.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/><BR/><BR/>Reynolds number : \(\text {Re} = \) {1:NUMERICAL:=4.1654043359e+04:2.0827021680e+03}\(\,\) \( \quad (22510. \, \rightarrow \, 41650.) \) <BR/>Schmidt number : \(\text {Sc} = \) {1:NUMERICAL:=6.1330096894e-01:3.0665048447e-02}\(\,\) \( \quad ( 6.13 \, 10^{-1} \, \rightarrow \, 6.16 \, 10^{-1} ) \) <BR/>Sherwood number : \(\text {Sh} = \) {2:NUMERICAL:=1.2842785885e+02:6.4213929423e+00}\(\,\) \( \quad (90. \, \rightarrow \, 128.) \) <BR/>Mass transfer coefficient : \(k_m = \) {1:NUMERICAL:=4.5245035769e-02:2.2622517885e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 4.52 \, 10^{-2} \, \rightarrow \, 6.03 \, 10^{-2} ) \) <BR/>Vapor concentration at the fruit surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=3.4556189867e+00:1.7278094934e-01}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (2.08 \, \rightarrow \, 3.45) \) <BR/>Incident vapor concentration : \(C_{V, \infty } = \) {2:NUMERICAL:=1.1403542656e+00:5.7017713281e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.72 \, \rightarrow \, 1.14) \) <BR/>Incident vapor concentration : {2:NUMERICAL:=1.1403542656e+00:5.7017713281e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.72 \, \rightarrow \, 1.14) \) <BR/>Massic evaporation rate : \(\dot {m}_V = \) {1:NUMERICAL:=3.7911759608e-05:1.8955879804e-06}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 7.39 \, 10^{-6} \, \rightarrow \, 3.79 \, 10^{-5} ) \) <BR/><BR/><BR/>The initial film thickness at the fruit surface is assumed to be \(e = 1.0\, \mathrm {mm} \) <BR/>Compute the total evaporation time : {2:NUMERICAL:=5.3034185674e+02:2.6517092837e+01}\(\, \mathrm {s}\) \( \quad (530. \, \rightarrow \, 680.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+ 
+</quiz>

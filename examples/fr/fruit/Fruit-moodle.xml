@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a question bank made for Moodle -->
+<!-- It was generated on 2025-08-07 22:46 by XeLaTeX running -->
+<!-- on *NIX with the package moodle v1.0 (2023/01/28) -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/TRANSFERT DE MATIÈRE/LOUISNARD/NUMERIQUES/FRUITAUTO</text>
+  </category>
+</question>
+ 
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Séchage d un fruit (AUTO)]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un fruit sphérique de diamètre \(D\) est séché par de l&rsquo;air à la température \(T_\infty \) et une humidité relative \(\psi \) s&rsquo;écoulant à la vitesse \(U_\infty \). <BR/><BR/><BR/>Les données sont les suivantes : <BR/><BR/><BR/>Diamètre : \(D = 7.0\, \mathrm {cm} \) <BR/>Température : \(T = 27.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Humidité relative : \(\psi = 34.\, \% \) <BR/>Vitesse : \(U_\infty = 8.5\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Épaisseur film : \(e = 1.\, \mathrm {mm} \) <BR/>Pression de valeur saturante de l’eau à la température donnée : \(p_{\text {sat}}(T) = 3568.\, \mathrm {Pa} \) <BR/>Coefficient de diffusion air/vapeur d’eau : \(D_{AV} = 2.541 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Viscosité cinématique de l’air : : \(\nu = 1.57 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Ces données vous sont personnelles. <BR/><BR/><BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à verifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/><BR/><BR/>Nombre de Reynolds : \(\text {Re} = \) {1:NUMERICAL:=3.8351671810e+04:1.9175835905e+03}\(\,\) \( \quad (14440. \, - \, 43890.) \) <BR/>Nombre de Schmidt : \(\text {Sc} = \) {1:NUMERICAL:=6.1786084723e-01:3.0893042361e-02}\(\,\) <BR/><BR/>Nombre de Sherwood : \(\text {Sh} = \) {2:NUMERICAL:=1.2289253817e+02:6.1446269087e+00}\(\,\) \( \quad (70. \, - \, 132.) \) <BR/>Coefficient d&rsquo;échange : \(k_m = \) {1:NUMERICAL:=4.4601451182e-02:2.2300725591e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 3.8 \, 10^{-2} \, - \, 5.4 \, 10^{-2} ) \) <BR/>Concentration en vapeur à la surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=1.4298300942e+00:7.1491504710e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) <BR/><BR/>Concentration en vapeur incidente : \(C_{V, \infty } = \) {2:NUMERICAL:=4.8614223203e-01:2.4307111601e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.48 \, - \, 1.33) \) <BR/>Flux massique d&rsquo;évaporation : \(\dot {m}_V = \) {1:NUMERICAL:=1.1662611703e-05:5.8313058515e-07}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 3.10 \, 10^{-6} \, - \, 2.16 \, 10^{-5} ) \) <BR/>Temps d&rsquo;évaporation : \(\tau = \) {2:NUMERICAL:=1.3199276796e+03:6.5996383978e+01}\(\, \mathrm {s}\) \( \quad (364. \, - \, 1711.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Séchage d un fruit (AUTO)]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un fruit sphérique de diamètre \(D\) est séché par de l&rsquo;air à la température \(T_\infty \) et une humidité relative \(\psi \) s&rsquo;écoulant à la vitesse \(U_\infty \). <BR/><BR/><BR/>Les données sont les suivantes : <BR/><BR/><BR/>Diamètre : \(D = 5.0\, \mathrm {cm} \) <BR/>Température : \(T = 48.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Humidité relative : \(\psi = 32.\, \% \) <BR/>Vitesse : \(U_\infty = 8.3\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Épaisseur film : \(e = 1.\, \mathrm {mm} \) <BR/>Pression de valeur saturante de l’eau à la température donnée : \(p_{\text {sat}}(T) = 11176.\, \mathrm {Pa} \) <BR/>Coefficient de diffusion air/vapeur d’eau : \(D_{AV} = 2.885 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Viscosité cinématique de l’air : : \(\nu = 1.77 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Ces données vous sont personnelles. <BR/><BR/><BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à verifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/><BR/><BR/>Nombre de Reynolds : \(\text {Re} = \) {1:NUMERICAL:=2.3487808386e+04:1.1743904193e+03}\(\,\) \( \quad (14440. \, - \, 43890.) \) <BR/>Nombre de Schmidt : \(\text {Sc} = \) {1:NUMERICAL:=6.1244032458e-01:3.0622016229e-02}\(\,\) <BR/><BR/>Nombre de Sherwood : \(\text {Sh} = \) {2:NUMERICAL:=9.2831280941e+01:4.6415640470e+00}\(\,\) \( \quad (70. \, - \, 132.) \) <BR/>Coefficient d&rsquo;échange : \(k_m = \) {1:NUMERICAL:=5.3563156501e-02:2.6781578250e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 3.8 \, 10^{-2} \, - \, 5.4 \, 10^{-2} ) \) <BR/>Concentration en vapeur à la surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=4.1859662747e+00:2.0929831373e-01}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) <BR/><BR/>Concentration en vapeur incidente : \(C_{V, \infty } = \) {2:NUMERICAL:=1.3395092079e+00:6.6975460395e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.48 \, - \, 1.33) \) <BR/>Flux massique d&rsquo;évaporation : \(\dot {m}_V = \) {1:NUMERICAL:=2.1554263434e-05:1.0777131717e-06}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 3.10 \, 10^{-6} \, - \, 2.16 \, 10^{-5} ) \) <BR/>Temps d&rsquo;évaporation : \(\tau = \) {2:NUMERICAL:=3.6438181514e+02:1.8219090757e+01}\(\, \mathrm {s}\) \( \quad (364. \, - \, 1711.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Séchage d un fruit (AUTO)]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un fruit sphérique de diamètre \(D\) est séché par de l&rsquo;air à la température \(T_\infty \) et une humidité relative \(\psi \) s&rsquo;écoulant à la vitesse \(U_\infty \). <BR/><BR/><BR/>Les données sont les suivantes : <BR/><BR/><BR/>Diamètre : \(D = 9.0\, \mathrm {cm} \) <BR/>Température : \(T = 28.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Humidité relative : \(\psi = 43.\, \% \) <BR/>Vitesse : \(U_\infty = 7.7\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Épaisseur film : \(e = 1.\, \mathrm {mm} \) <BR/>Pression de valeur saturante de l’eau à la température donnée : \(p_{\text {sat}}(T) = 3782.\, \mathrm {Pa} \) <BR/>Coefficient de diffusion air/vapeur d’eau : \(D_{AV} = 2.557 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Viscosité cinématique de l’air : : \(\nu = 1.58 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Ces données vous sont personnelles. <BR/><BR/><BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à verifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/><BR/><BR/>Nombre de Reynolds : \(\text {Re} = \) {1:NUMERICAL:=4.3891723305e+04:2.1945861653e+03}\(\,\) \( \quad (14440. \, - \, 43890.) \) <BR/>Nombre de Schmidt : \(\text {Sc} = \) {1:NUMERICAL:=6.1758842811e-01:3.0879421405e-02}\(\,\) <BR/><BR/>Nombre de Sherwood : \(\text {Sh} = \) {2:NUMERICAL:=1.3267608311e+02:6.6338041557e+00}\(\,\) \( \quad (70. \, - \, 132.) \) <BR/>Coefficient d&rsquo;échange : \(k_m = \) {1:NUMERICAL:=3.7687869223e-02:1.8843934612e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 3.8 \, 10^{-2} \, - \, 5.4 \, 10^{-2} ) \) <BR/>Concentration en vapeur à la surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=1.5109161758e+00:7.5545808788e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) <BR/><BR/>Concentration en vapeur incidente : \(C_{V, \infty } = \) {2:NUMERICAL:=6.4969395558e-01:3.2484697779e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.48 \, - \, 1.33) \) <BR/>Flux massique d&rsquo;évaporation : \(\dot {m}_V = \) {1:NUMERICAL:=1.4867029642e-05:7.4335148211e-07}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 3.10 \, 10^{-6} \, - \, 2.16 \, 10^{-5} ) \) <BR/>Temps d&rsquo;évaporation : \(\tau = \) {2:NUMERICAL:=1.7116331309e+03:8.5581656547e+01}\(\, \mathrm {s}\) \( \quad (364. \, - \, 1711.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Séchage d un fruit (AUTO)]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>Un fruit sphérique de diamètre \(D\) est séché par de l&rsquo;air à la température \(T_\infty \) et une humidité relative \(\psi \) s&rsquo;écoulant à la vitesse \(U_\infty \). <BR/><BR/><BR/>Les données sont les suivantes : <BR/><BR/><BR/>Diamètre : \(D = 4.0\, \mathrm {cm} \) <BR/>Température : \(T = 28.\, \mathrm {^\circ \mathrm {C}} \) <BR/>Humidité relative : \(\psi = 50.\, \% \) <BR/>Vitesse : \(U_\infty = 5.7\, \mathrm {m}\, \mathrm {s}^{-1} \) <BR/>Épaisseur film : \(e = 1.\, \mathrm {mm} \) <BR/>Pression de valeur saturante de l’eau à la température donnée : \(p_{\text {sat}}(T) = 3782.\, \mathrm {Pa} \) <BR/>Coefficient de diffusion air/vapeur d’eau : \(D_{AV} = 2.557 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Viscosité cinématique de l’air : : \(\nu = 1.58 \, 10^{-5} \, \mathrm {m}^{2}\, \mathrm {s}^{-1} \) <BR/>Ces données vous sont personnelles. <BR/><BR/><BR/>Des fourchettes indicatives vous sont fournies en face de chaque réponse. Ce ne sont que des ordres de grandeur pour vous inciter à verifier vos calculs avant de valider vos réponses, et la bonne réponse peut sortir légèrement de l&rsquo;intervalle indiqué. <BR/><BR/><BR/>Nombre de Reynolds : \(\text {Re} = \) {1:NUMERICAL:=1.4440566975e+04:7.2202834874e+02}\(\,\) \( \quad (14440. \, - \, 43890.) \) <BR/>Nombre de Schmidt : \(\text {Sc} = \) {1:NUMERICAL:=6.1758842811e-01:3.0879421405e-02}\(\,\) <BR/><BR/>Nombre de Sherwood : \(\text {Sh} = \) {2:NUMERICAL:=7.0981650843e+01:3.5490825421e+00}\(\,\) \( \quad (70. \, - \, 132.) \) <BR/>Coefficient d&rsquo;échange : \(k_m = \) {1:NUMERICAL:=4.5366738305e-02:2.2683369153e-03}\(\, \mathrm {m}\, \mathrm {s}^{-1}\) \( \quad ( 3.8 \, 10^{-2} \, - \, 5.4 \, 10^{-2} ) \) <BR/>Concentration en vapeur à la surface : \(C_{V, \text {surface}} = \) {2:NUMERICAL:=1.5109161758e+00:7.5545808788e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) <BR/><BR/>Concentration en vapeur incidente : \(C_{V, \infty } = \) {2:NUMERICAL:=7.5545808788e-01:3.7772904394e-02}\(\, \mathrm {mol}\, \mathrm {m}^{-3}\) \( \quad (0.48 \, - \, 1.33) \) <BR/>Flux massique d&rsquo;évaporation : \(\dot {m}_V = \) {1:NUMERICAL:=3.1009180701e-06:1.5504590350e-07}\(\, \mathrm {kg}\, \mathrm {s}^{-1}\) \( \quad ( 3.10 \, 10^{-6} \, - \, 2.16 \, 10^{-5} ) \) <BR/>Temps d&rsquo;évaporation : \(\tau = \) {2:NUMERICAL:=1.6209871180e+03:8.1049355902e+01}\(\, \mathrm {s}\) \( \quad (364. \, - \, 1711.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+ 
+</quiz>

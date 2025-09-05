@@ -1,0 +1,260 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,landscape]{geometry}
+
+\usepackage{moodle}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm,thmtools}
+\usepackage{graphicx}
+
+\usepackage{layouts}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage{xspace}
+
+
+\usepackage[french]{babel}
+
+\usepackage{ifthen}
+\usepackage{verbatim} % Pour mettre des parties en commentaire
+
+\usepackage{mymaths}
+\usepackage{hyperref}
+
+
+
+\begin{document}
+
+
+
+\begin{quiz}{OLMoodle} 
+
+ \begin{cloze}{Fruit drying} 
+A spherical fruit of diameter $D$, whose surface is wet, is dried by an airflow at temperature $T_\infty$, relative humidity $\psi$, and velocity $U_\infty$.
+
+We want to compute the evaporation rate of the water film at the fruit surface.
+
+ 
+
+You will use the following data
+
+ 
+
+Diameter $D = 9.0\,  \mathrm{cm} $
+
+Temperature $T = 36.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Relative humidity $\psi = 39.\, \% $
+
+Velocity $U_\infty = 9.8\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Atmospheric pressure $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Water saturation pressure at given temperature $p_{\text{sat}}(T) = 5947.\,  \mathrm{SI} $
+
+Diffusion coefficient $D_{AV} =  2.69 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Kinematic viscosity of air $\nu =  1.65 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+These data are personal
+
+ 
+
+Compute the quantities below. The correlation used must \textbf{involve the Schmidt number}.
+
+In your answers, use scientific notations if needed.  ($6.34\, 10^{-5}$ writes 6.34e-5 and $10^{3}$ writes 1e3).
+
+Your answer is considered correct within a relative error of $5.0\, \% $
+
+Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results.
+
+ 
+
+Reynolds number : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.6681882435e+03}] 5.3363764870e+04 
+\end{numerical} 
+ $\,$ 
+ $ \quad (25680. \, \rightarrow \, 53360.) $ 
+
+Schmidt number : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0763264326e-02}] 6.1526528652e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.15 \, 10^{-1}  \, \rightarrow \,  6.15 \, 10^{-1} ) $ 
+
+Sherwood number : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.4057472873e+00}] 1.4811494575e+02 
+\end{numerical} 
+ $\,$ 
+ $ \quad (97. \, \rightarrow \, 148.) $ 
+
+Mass transfer coefficient : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={2.2104774518e-03}] 4.4209549036e-02 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 3.78 \, 10^{-2}  \, \rightarrow \,  4.42 \, 10^{-2} ) $ 
+
+Vapor concentration at the fruit surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.1569668770e-01}] 2.3139337540e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (2.31 \, \rightarrow \, 2.43) $ 
+
+Incident  vapor concentration : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.5121708204e-02}] 9.0243416408e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.90 \, \rightarrow \, 1.41) $ 
+
+Incident  vapor concentration : 
+\begin{numerical}[points=2] 
+\item[tolerance={4.5121708204e-02}] 9.0243416408e-01 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.90 \, \rightarrow \, 1.41) $ 
+
+Massic evaporation rate : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.4291382474e-06}] 2.8582764947e-05 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 1.07 \, 10^{-5}  \, \rightarrow \,  2.86 \, 10^{-5} ) $ 
+
+ 
+
+The initial film thickness at the fruit surface is assumed to be $e = 1.0\,  \mathrm{mm} $
+
+Compute the total evaporation time : 
+\begin{numerical}[points=2] 
+\item[tolerance={4.4514413740e+01}] 8.9028827481e+02 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (890. \, \rightarrow \, 1430.) $ 
+
+\end{cloze} 
+
+
+ \begin{cloze}{Fruit drying} 
+A spherical fruit of diameter $D$, whose surface is wet, is dried by an airflow at temperature $T_\infty$, relative humidity $\psi$, and velocity $U_\infty$.
+
+We want to compute the evaporation rate of the water film at the fruit surface.
+
+ 
+
+You will use the following data
+
+ 
+
+Diameter $D = 7.0\,  \mathrm{cm} $
+
+Temperature $T = 37.0\,  \mathrm{^\circ\mathrm{C}} $
+
+Relative humidity $\psi = 58.\, \% $
+
+Velocity $U_\infty = 6.1\,  \mathrm{m}\,  \mathrm{s}^{-1} $
+
+Atmospheric pressure $p_{\text{atm}} = 101300.\,  \mathrm{Pa} $
+
+Water saturation pressure at given temperature $p_{\text{sat}}(T) = 6281.\,  \mathrm{SI} $
+
+Diffusion coefficient $D_{AV} =  2.70 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+Kinematic viscosity of air $\nu =  1.66 \, 10^{-5} \,  \mathrm{m}^{2}\,  \mathrm{s}^{-1} $
+
+These data are personal
+
+ 
+
+Compute the quantities below. The correlation used must \textbf{involve the Schmidt number}.
+
+In your answers, use scientific notations if needed.  ($6.34\, 10^{-5}$ writes 6.34e-5 and $10^{3}$ writes 1e3).
+
+Your answer is considered correct within a relative error of $5.0\, \% $
+
+Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results.
+
+ 
+
+Reynolds number : $\text{Re} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.2844632865e+03}] 2.5689265731e+04 
+\end{numerical} 
+ $\,$ 
+ $ \quad (25680. \, \rightarrow \, 53360.) $ 
+
+Schmidt number : $\text{Sc} =  $
+\begin{numerical}[points=1] 
+\item[tolerance={3.0750608910e-02}] 6.1501217819e-01 
+\end{numerical} 
+ $\,$ 
+ $ \quad ( 6.15 \, 10^{-1}  \, \rightarrow \,  6.15 \, 10^{-1} ) $ 
+
+Sherwood number : $\text{Sh} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={4.8894713916e+00}] 9.7789427832e+01 
+\end{numerical} 
+ $\,$ 
+ $ \quad (97. \, \rightarrow \, 148.) $ 
+
+Mass transfer coefficient : $k_m =  $
+\begin{numerical}[points=1] 
+\item[tolerance={1.8878015474e-03}] 3.7756030947e-02 
+\end{numerical} 
+ $\,  \mathrm{m}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 3.78 \, 10^{-2}  \, \rightarrow \,  4.42 \, 10^{-2} ) $ 
+
+Vapor concentration at the fruit surface : $C_{V, \text{surface}} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={1.2180681843e-01}] 2.4361363687e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (2.31 \, \rightarrow \, 2.43) $ 
+
+Incident  vapor concentration : $C_{V, \infty} =  $
+\begin{numerical}[points=2] 
+\item[tolerance={7.0647954691e-02}] 1.4129590938e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.90 \, \rightarrow \, 1.41) $ 
+
+Incident  vapor concentration : 
+\begin{numerical}[points=2] 
+\item[tolerance={7.0647954691e-02}] 1.4129590938e+00 
+\end{numerical} 
+ $\,  \mathrm{mol}\,  \mathrm{m}^{-3}$ 
+ $ \quad (0.90 \, \rightarrow \, 1.41) $ 
+
+Massic evaporation rate : $\dot{m}_V =  $
+\begin{numerical}[points=1] 
+\item[tolerance={5.3521180170e-07}] 1.0704236034e-05 
+\end{numerical} 
+ $\,  \mathrm{kg}\,  \mathrm{s}^{-1}$ 
+ $ \quad ( 1.07 \, 10^{-5}  \, \rightarrow \,  2.86 \, 10^{-5} ) $ 
+
+ 
+
+The initial film thickness at the fruit surface is assumed to be $e = 1.0\,  \mathrm{mm} $
+
+Compute the total evaporation time : 
+\begin{numerical}[points=2] 
+\item[tolerance={7.1905196941e+01}] 1.4381039388e+03 
+\end{numerical} 
+ $\,  \mathrm{s}$ 
+ $ \quad (890. \, \rightarrow \, 1430.) $ 
+
+\end{cloze} 
+
+
+\end{quiz}
+\end{document}

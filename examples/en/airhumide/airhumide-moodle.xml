@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a question bank made for Moodle -->
+<!-- It was generated on 2025-09-02 10:33 by XeLaTeX running -->
+<!-- on *NIX with the package moodle v1.0 (2023/01/28) -->
+
+<quiz>
+ 
+<question type="category">
+  <category>
+    <text>$course$/top/NUMERICAL/MOISTAIR</text>
+  </category>
+</question>
+ 
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 25.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 78.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.5559237183e+01:1.5559237183e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.6573585636e-01:8.6573585636e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=6.4751265258e+01:6.4751265258e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 22.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 48.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=7.8936363385e+00:7.8936363385e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.4671993647e-01:8.4671993647e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=4.2170413773e+01:4.2170413773e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 22.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 70.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.1578906252e+01:1.1578906252e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.5167403318e-01:8.5167403318e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=5.1535937615e+01:5.1535937615e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 22.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 63.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.0401651303e+01:1.0401651303e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.5009145307e-01:8.5009145307e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=4.8544132522e+01:4.8544132522e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 29.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 56.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.4096769526e+01:1.4096769526e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.7533800795e-01:8.7533800795e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=6.5149277110e+01:6.5149277110e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 20.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 60.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=8.7366105036e+00:8.7366105036e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.4210790838e-01:8.4210790838e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=4.2270896475e+01:4.2270896475e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 16.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 59.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=6.6561524837e+00:6.6561524837e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.2787753823e-01:8.2787753823e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=3.2922861368e+01:3.2922861368e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 18.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 66.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=8.4780040261e+00:8.4780040261e-01}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.3601974032e-01:8.3601974032e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=3.9573770882e+01:3.9573770882e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 25.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 69.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.3724325578e+01:1.3724325578e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.6324411849e-01:8.6324411849e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=6.0078112382e+01:6.0078112382e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+<question type="cloze">
+  <name format="html">
+    <text><![CDATA[Moist air]]></text>
+  </name>
+  <questiontext format="html">
+    <text><![CDATA[<p>The dry thermometer of a meteorological station indicates a temperature \(\theta = 27.\, \mathrm {^\circ \mathrm {C}} \) <BR/>The moist sensor indicates a relative humidity \(\psi = 52.\, \% \) <BR/>Atmospheric pressure is \(p_{\text {atm}} = 101325.\, \mathrm {Pa} \) <BR/><BR/><BR/>Compute the quantities below <BR/>In your answers, use scientific notations if needed. (\(6.34\, 10^{-5}\) writes 6.34e-5 and \(10^{3}\) writes 1e3). <BR/>Your answer is considered correct within a relative error of \(10.0\, \% \) <BR/>Indicative ranges are proposed in front of each answer. This are orders of magnitude to help you to check your results. <BR/>Absolute humidity : \(w = \) {1:NUMERICAL:=1.1603805322e+01:1.1603805322e+00}\(\, \mathrm {g}\, \mathrm {kg}^{-1}\) \( \quad (6. \, \rightarrow \, 15.) \) <BR/>Volume per dry air mass unit : \(v = \) {1:NUMERICAL:=8.6613588888e-01:8.6613588888e-02}\(\, \mathrm {m}^{3}\, \mathrm {kg}^{-1}\) \( \quad ( 8.28 \, 10^{-1} \, \rightarrow \, 8.75 \, 10^{-1} ) \) <BR/>Enthalpy per dry air mass unit : \(h = \) {2:NUMERICAL:=5.6729809246e+01:5.6729809246e+00}\(\, \mathrm {kJ}\, \mathrm {kg}^{-1}\) \( \quad (32. \, \rightarrow \, 65.) \) <BR/></p>]]></text>
+  </questiontext>
+  <generalfeedback format="html"><text/></generalfeedback>
+  <penalty>0.10</penalty>
+  <hidden>0</hidden>
+</question>
+ 
+</quiz>
