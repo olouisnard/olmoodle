@@ -26,6 +26,26 @@ _OLMOODLE is here ! _
 
 You can change the current language used in OLMOODLE. To do so, run "`olmoodle_lang`". The list of currently available languages will be proposed. Select the desired one.
 
+## Package information
+
+The package is structured as follows
+
+   __  mfiles            The matlab .m source files 
+  |         |__  utils   Matlab .m utilities
+  |
+  |__  doc               The documentation
+  |
+  |
+  |__  examples          The examples
+  |           |__ en       in english
+  |           |__ fr       in french  
+  |
+  |
+  |__  data              The text files for internationalization 
+          |__ en           in english 
+          |__ fr           in french  
+  
+
 ## Usage
 - Create a void directory somewhere, and there create your Excel file, say "`myquestion.xls`"
 - In MATLAB, go to that directory, and launch "`olmoodle_main`"
