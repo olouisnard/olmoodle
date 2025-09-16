@@ -139,7 +139,7 @@ Tolerance should be numeric (line %d, I read "%s").
 Tolerance unspecified (line %d).
 
 .error.BadUnitTOL
-Bad unit for tolerance (ligne %d, je lis "%s"). \n Leave blank or typeset "percent".
+Bad unit for tolerance (line %d, I read "%s"). \n Leave blank or typeset "percent".
 
 .error.WrongCode
 Wrong code (line %d, I read "%s").
@@ -167,6 +167,28 @@ Precision must be integer (line %d, I read "%s").
 
 .error.PrecUnspecified
 Warning: precision line %d unspecified.
+
+.error.TextIsNumeric
+Text field is numeric (line %d). This is considered as an error.
+
+.error.ValueNotNumeric
+Value should be numerical (line %d, I read "%s").
+Check whether in your country, decimal point is "." ou "," in Excel
+
+.error.UnitForgotSeparator
+Error when parsing unit %s, field %d (line %d)
+You probably forgot a separator between two units.
+
+.error.UnitForgotLetter
+Error when parsing unit %s, field %d (line %d)
+There seems to be no unit letter after separator.
+
+.error.UnitBadExponent
+Error when parsing unit %s, field %d (line %d)
+Badly formatted exponent.
+
+.error.UnspecifiedMoodlecat
+Moodle category unspecified. If you don't know, add a code "M" and leave blank value.
 
 .error.Found
 I found errors. Correct the Excel file and launch me again.

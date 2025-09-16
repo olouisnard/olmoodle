@@ -1,4 +1,4 @@
-% OLMOODLE_MANAGEERRRORS:
+% OLMOODLE_MANAGEERRORS:
 %
 % Assign tolerance
 
@@ -94,7 +94,26 @@ for ierr = 1:numel(errorstruct)
 	     errorstruct(ierr).line) ;
     fprintf('\n')  ;
 
+   case errorcodes.TEXT_IS_NUMERIC
+   
+    fprintf (textstruct.error.TextIsNumeric{1}, ...
+	     errorstruct(ierr).line)  ;
+    fprintf('\n')  ;
     
+   case errorcodes.VALUE_NOT_NUMERIC
+
+    fprintf (textstruct.error.ValueNotNumeric{1}, ...
+	     errorstruct(ierr).line, ...
+	     errorstruct(ierr).string) ;
+    fprintf('\n')  ;
+    fprintf (textstruct.error.ValueNotNumeric{2})
+    fprintf('\n')  ;
+
+   case errorcodes.MOODLECAT_UNSPECIFIED ;
+   
+    fprintf (textstruct.error.UnspecifiedMoodlecat{1}) ;
+    fprintf('\n')  ;
+
    otherwise
     error('I found unknown error code. This should not happen !') ;
   end

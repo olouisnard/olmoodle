@@ -37,9 +37,10 @@
 % There are exceptions for special units:
 %
 %  . degree Celsius must be coded on input as "degC" (case independent)
-%     and will apeear on output as °C 
+%     and will appear on output as °C 
 %
-%  . degree Fahrenheit must be coded on input as "degF" (case independent) and will apeear on output as °F 
+%  . degree Fahrenheit must be coded on input as "degF" (case independent) 
+%     and will appear on output as °F 
 %
 %  . percents must be coded as "percent" and wil appear on output as %
 
@@ -50,18 +51,35 @@
 %
 % Finally empty strings or <missing> are accepted on input, and will
 % be converted into the LaTeX blank $ \, $
+%
+% Usage:
+%     [unitstring, uniterr] = olmoodle_FormatUnit (inputstring)
+%
+% On input:
+%   inputstring: the string to interpret
+%
+% On ouput: 
+%   unitstring: the unit formatted in LaTeX
+%   uniterr : a structure error containing a code and the field
+%   that is suspected to fail.
 
-function unitstring = olmoodle_FormatUnit (inputstring)
+function [latexstring, uniterr] = olmoodle_FormatUnit (inputstring)
 
-% Trat <missing> or empty input strings
-if any(ismissing(inputstring)) || isempty(inputstring)
-  unitstring = '\,' ;
-  return
-end
+% Initializing output error structure
+uniterr.code = 0 ;
+uniterr.numfield = 0 ; ;
 
 % Format for outputting latex string
 exponentlatexfmt = '^{%s}' ;
 blankfmt = '\\, ' ;
+
+%----------------------------------------------------------------------
+% First, we treat <missing> or empty input strings
+%----------------------------------------------------------------------  
+if any(ismissing(inputstring)) || isempty(inputstring)
+  latexstring = '\,' ;
+  return
+end
 
 
 %----------------------------------------------------------------------  
@@ -74,7 +92,7 @@ blankfmt = '\\, ' ;
 % We search a-z A-Z or -
 [inds_start_alphanum, inds_end_alphanum] = regexp(inputstring, '[\w,''\-'']*' ) ;
 
-unitstring = '' ;
+latexstring = '' ;
 
 
 % ======================================================================
@@ -108,22 +126,51 @@ for n = 1 : numel (inds_start_alphanum)
 		    % LaTeX output
   else
     % Normal case : exponent is specified
+
+    % Extract what there is before exponent, this should be letters
     try
       letter  = extractBefore(currentunitblock, indsplit) ;
     catch ME
-      error('Error when parsing unit %s (field %d) \n  You probably forgot a separator between two units.\n', inputstring, n) ;
+      uniterr.code = -1 ;
+      uniterr.numfield = n ;
+      return
+      % Error when parsing unit %s (field %d)
+      % You probably forgot a separator between two units. 
     end
+    
+    % Extract exponent
     try 
       exponentstr = extractAfter(currentunitblock, indsplit-1) ;
     catch ME
-      error('Error when parsing unit %s (field %d) \n  You probably forgot a separator between two units.\n', inputstring, n) ;
+      % Separator forgotten
+      uniterr.code = -1 ;
+      uniterr.numfield = n ;
+      return
     end
     
+    % letter should be non-empty, otherwise error
+    if isempty(letter)
+      % No unit letter
+      uniterr.code = -2 ;
+      uniterr.numfield = n ;
+      return
+    end
+    
+    % Exponent should be NNN or -NNNN
+    if isempty(regexp(exponentstr, '(^-?\d)\d*$'))
+      % Bad exponent
+      uniterr.code = -3 ;
+      uniterr.numfield = n ;
+      return
+    end 
+
     % Converting exponentstr to signed integer (and detect error if
     % exponent is not numeric)
-    exponent = str2num(exponentstr);
+    exponent = str2num(exponentstr) ;
     if isempty(exponent)
-      error('Error when parsing %s (field %d) \n', inputstring, n) ;
+      % Bad exponent
+      uniterr.code = -3 ;
+      uniterr.numfield = n ;
     end    
   end
   
@@ -201,9 +248,9 @@ for n = 1 : numel (inds_start_alphanum)
   % Appending current Latex substring to output Latex string
   %
   %----------------------------------------------------------------------    
-  unitstring = append(unitstring, currentstring) ;
+  latexstring = append(latexstring, currentstring) ;
 end
 
 % Final LaTeX $
-% unitstring = append(unitstring, ' $') ;
+% latexstring = append(latexstring, ' $') ;
 

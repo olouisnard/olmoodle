@@ -20,6 +20,14 @@ OutputPath = './' ;
 % ======================================================================
 textstruct = olmoodle_ReadTexts (pathstruct.TextsFilename) ;
 
+% ======================================================================
+%
+% Definie error codes
+%
+% ======================================================================
+errorcodes = olmoodle_DefineErrorCodes() ;
+%
+
 % ====================================================================== 
 %
 % Read Excel file
@@ -31,14 +39,30 @@ xlsfilename = askfilename( {'.xlsx','.xls'}, 1, textstruct.message.AskFileName{1
 
 WriteTextBlocks(1, textstruct.message.ReadExcelFile) ;
 
+%----------------------------------------------------------------------
 % Let's open the funny Excel !
-[datastruct, genstruct, errorstruct, errorcodes] = ...
-    olmoodle_ReadExcel (xlsfilename, textstruct) ;
+%----------------------------------------------------------------------
+[excelstruct, lists, errorstruct] = ...
+    olmoodle_ReadExcel (xlsfilename, errorcodes) ;
+
+% ====================================================================== 
+%
+% Detect errors, then manage error display
+%
+% ====================================================================== 
+% Detect errors in Excel files
+[datastruct, errorstruct, genstruct] = ...
+    olmoodle_CheckFields (excelstruct, errorstruct, errorcodes) ;
+
+% Add lists to genstruct
+genstruct.lists = lists ;
 
 ierr = olmoodle_ManageErrors( errorstruct, errorcodes, textstruct) ;
-if ierr==-1
-  fprintf(textstruct.error.Found{1})  ;
-  fprintf('\n')  ;
+
+% WE FOUND ERRORS. WE STOP HERE !
+if ierr == -1
+  fprintf( textstruct.error.Found{1} )  ;
+  fprintf( '\n' )  ;
   return
 end
 
@@ -128,7 +152,6 @@ for iset = 1 : genstruct.nset
       %--------------------------------------------------
       % Input quantity fixed in set
       %--------------------------------------------------
-      formatted_unit = olmoodle_FormatUnit (datastruct(n).props.unit) ;
       matlabname = datastruct(n).props.matlab ;
 
       olmoodle_DisplayInputData (fid,  struct(...
@@ -136,7 +159,7 @@ for iset = 1 : genstruct.nset
 	  'latex', datastruct(n).props.latex, ...
 	  'value', myins.(matlabname), ...
 	  'format', datastruct(n).props.format, ...
-	  'unit', formatted_unit ...
+	  'unit', datastruct(n).props.unit ...
 	  ) ) ;
       
       case 'tol'
@@ -144,13 +167,11 @@ for iset = 1 : genstruct.nset
       % Tolerance (displayed similarly as input fixed quantities 
       % except that no latex name is printed)
       %----------------------------------------------------------
-      formatted_unit = olmoodle_FormatUnit (datastruct(n).props.unit) ;
-
       olmoodle_DisplayInputData (fid,  struct(...
 	  'sentence', datastruct(n).props.text, ...
 	  'value', genstruct.tolpercent, ...
 	  'format', datastruct(n).props.format, ...
-	  'unit', formatted_unit ...
+	  'unit', datastruct(n).props.unit ...
 	  ), [], struct(...
 	      'displayequalsign', 0) ) ;
 
@@ -158,7 +179,6 @@ for iset = 1 : genstruct.nset
       %--------------------------------------------------
       % Input quantity variable in set
       %--------------------------------------------------
-      formatted_unit = olmoodle_FormatUnit (datastruct(n).props.unit) ;
       matlabname = datastruct(n).props.matlab ;
       
       olmoodle_DisplayInputData (fid, struct(...
@@ -166,14 +186,13 @@ for iset = 1 : genstruct.nset
 	  'latex', datastruct(n).props.latex, ...
 	  'value', myins.(matlabname)(iset), ...
 	  'format', datastruct(n).props.format, ...
-	  'unit', formatted_unit ...
+	  'unit', datastruct(n).props.unit ...
 	  ) ) ;
       
-     case 'calc'
+     case 'calcinput'
       %--------------------------------------------------
       % Calculated quantity fixed in set
       %--------------------------------------------------
-      formatted_unit = olmoodle_FormatUnit (datastruct(n).props.unit) ;
       matlabname = datastruct(n).props.matlab ;
       
       olmoodle_DisplayInputData (fid, struct(...
@@ -181,7 +200,7 @@ for iset = 1 : genstruct.nset
 	  'latex', datastruct(n).props.latex, ...
 	  'value', myouts.(matlabname).value(iset), ...
 	  'format', datastruct(n).props.format, ...
-	  'unit', formatted_unit ... 
+	  'unit', datastruct(n).props.unit ... 
 	  ) ) ;
       
       
@@ -189,14 +208,13 @@ for iset = 1 : genstruct.nset
       %--------------------------------------------------
       % Question
       %--------------------------------------------------
-      formatted_unit = olmoodle_FormatUnit (datastruct(n).props.unit) ;
       matlabname = datastruct(n).props.matlab ;
 
       olmoodle_DisplayAnswerField (fid,  struct(...
 	  'sentence', datastruct(n).props.text, ...
 	  'latex', datastruct(n).props.latex, ...
 	  'value', myouts.(matlabname).value(iset), ...
-	  'unit', formatted_unit, ...
+	  'unit', datastruct(n).props.unit, ...
 	  'min', myouts.(matlabname).min, ...
 	  'max', myouts.(matlabname).max, ...
 	  'format', datastruct(n).props.format, ...

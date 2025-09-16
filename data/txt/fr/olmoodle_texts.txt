@@ -173,8 +173,31 @@ La precision doit être un entier (ligne %d, je lis "%s").
 .error.PrecUnspecified
 Attention: précision ligne %d non spécifiée.
 
+.error.TextIsNumeric
+Le texte est numérique (line %d). Je considère ça comme une erreur.
+
+.error.ValueNotNumeric
+La valeur doit être numérique (ligne %d, je lis "%s").
+Vérifiez selon votre pays si le point décimal dans Excel est "." ou ","
+
+.error.UnitForgotSeparator
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Vous avez probablement oublié de mettre un séparateur entre deux unités.
+
+.error.UnitForgotLetter
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Il semble ne pas y avoir de lettre après le séparateur.
+
+.error.UnitBadExponent
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Exposant mal formatté
+
+.error.UnspecifiedMoodlecat
+Catégorie Moodle non spécifiée. Si vous ne savez pas, ajoutez une ligne "M" et laissez la valeur vide.
+
 .error.Found
 J'ai trouvé des erreurs. Corrigez le fichier Excel et relancez-moi.
+
 
 words.Line
 ligne
