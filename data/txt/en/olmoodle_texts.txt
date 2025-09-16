@@ -23,10 +23,10 @@
 .mycode.info_commentoutputs
 %######################################################################
 %
-% You must modify the folllowing executable lines (replacing zzz by
-% your own computations)
+% You must modify the executable lines starting by zzz = at the end of
+% this file (replacing "zzz" by your own computations).
 %
-% Ti is here that you must
+% It is here that you must
 %
 %  . compute the secondary input data ('C' code in your Excel
 %     file) in function of the inputs (listed above).

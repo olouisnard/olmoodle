@@ -34,6 +34,12 @@
 %    by the user. The min and max of each answer variable is a lso
 %    computed in myouts.(variable).min and myouts.(variable).max
 
+% Below one should care that all internally used variable name
+% should not interfere with a name choosen by the user.
+% Renamed k into kfixed, kvar etc and n into indfixed, indvar
+% etc. 
+%Maybe one should add prefix ol_ in front to consolidate...
+
 function myouts = olmoodle_ExecMyCode (genstruct, datastruct, myins) 
 
 nset = genstruct.nset ;
@@ -46,20 +52,20 @@ zzz = zeros(nset, 1) ;
 %======================================================================
 
 % Fixed data
-for k = 1 : numel(genstruct.lists.fixedinput)
-  n = genstruct.lists.fixedinput(k) ;
+for kfixed = 1 : numel(genstruct.lists.fixedinput)
+  indfixed = genstruct.lists.fixedinput(kfixed) ;
   comm = sprintf('%s = myins.%s ; ', ...
-		 datastruct(n).props.matlab, ...
-		 datastruct(n).props.matlab) ;
+		 datastruct(indfixed).props.matlab, ...
+		 datastruct(indfixed).props.matlab) ;
   eval(comm) ;
 end
 
 % Varying data
-for k = 1 : numel(genstruct.lists.varinput)
-  n = genstruct.lists.varinput(k) ;
+for kvar = 1 : numel(genstruct.lists.varinput)
+  indvar = genstruct.lists.varinput(kvar) ;
   comm = sprintf('%s = myins.%s ; ', ...
-		 datastruct(n).props.matlab, ...
-		 datastruct(n).props.matlab) ;
+		 datastruct(indvar).props.matlab, ...
+		 datastruct(indvar).props.matlab) ;
   eval(comm) ;
 end
 
@@ -80,22 +86,22 @@ mycode
 
 
 % Matlab assignment lines for calculated inputs
-for k = 1 : numel(genstruct.lists.calc)
-  n = genstruct.lists.calc(k) ;
+for kcalc = 1 : numel(genstruct.lists.calc)
+  indcalc = genstruct.lists.calc(kcalc) ;
   comm = sprintf('myouts.%s.value = %s ; ', ...
-		 datastruct(n).props.matlab, ...
-		 datastruct(n).props.matlab) ;
+		 datastruct(indcalc).props.matlab, ...
+		 datastruct(indcalc).props.matlab) ;
   eval(comm) ;
 end
 
 
 
 % Matlab assignment lines for answers to questions
-for k = 1 : numel(genstruct.lists.question)
-  n = genstruct.lists.question(k) ;
+for kquestion = 1 : numel(genstruct.lists.question)
+  indquestion = genstruct.lists.question(kquestion) ;
   comm = sprintf('myouts.%s.value = %s ; ', ...
-		 datastruct(n).props.matlab, ...
-		 datastruct(n).props.matlab) ;
+		 datastruct(indquestion).props.matlab, ...
+		 datastruct(indquestion).props.matlab) ;
   eval(comm) ;
 end
 
@@ -104,10 +110,10 @@ end
 % Compute min and maxes of answers
 %======================================================================
 % Matlab assignment lines for answers to questions
-for k = 1 : numel(genstruct.lists.question)
-  n = genstruct.lists.question(k) ;
+for kquestion = 1 : numel(genstruct.lists.question)
+  indquestion = genstruct.lists.question(kquestion) ;
 
-  varname = datastruct(n).props.matlab ;
+  varname = datastruct(indquestion).props.matlab ;
 
   myouts.(varname).min = min (myouts.(varname).value) ;
   myouts.(varname).max = max (myouts.(varname).value) ;

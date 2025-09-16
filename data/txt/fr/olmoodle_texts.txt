@@ -23,8 +23,8 @@
 .mycode.info_commentoutputs
 %######################################################################
 %
-% Vous devez modifier les lignes suivantes (en remplaçant zzz par vos
-% propres calculs)
+% Vous devez modifier les lignes commençant par zzz = à la fin de ce
+% fichier (en remplaçant "zzz" par vos propres calculs)
 %
 % C'est ici que vous devez :
 %

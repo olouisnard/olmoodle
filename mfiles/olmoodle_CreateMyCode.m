@@ -26,6 +26,21 @@ end
 if CREATE_MYCODE
   fidmycode = fopen('mycode.m', 'w', 'n', 'UTF-8') ;
   fprintf(fidmycode, '%% -*- coding: utf-8 -*-\n\n') ;
+
+
+  %======================================================================  
+  %
+  % Writing comments in matlab file
+  %
+  %======================================================================  
+  %----------------------------------------------------------------------
+  % General header comment
+  %----------------------------------------------------------------------
+  WriteTextBlocks(fidmycode, textstruct.mycode.info_commentoutputs, replacements) ;
+  
+  %----------------------------------------------------------------------
+  % General introductory comment on inputs
+  %----------------------------------------------------------------------
   WriteTextBlocks( fidmycode,  textstruct.mycode.info_inputs, replacements) ;
   
 %----------------------------------------------------------------------
@@ -33,10 +48,10 @@ if CREATE_MYCODE
 %----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_fixedinputs, replacements) ;
   
-  for k = 1 : numel(genstruct.lists.fixedinput)
-    n = genstruct.lists.fixedinput(k) ;
+  for kfixed = 1 : numel(genstruct.lists.fixedinput)
+    indfixed = genstruct.lists.fixedinput(kfixed) ;
     fprintf( fidmycode, '%% %s\t:\t%s\n', ...
-	     datastruct(n).props.matlab, datastruct(n).props.text) ;
+	     datastruct(indfixed).props.matlab, datastruct(indfixed).props.text) ;
   end
 
   fprintf( fidmycode, '\n') ;
@@ -46,54 +61,45 @@ if CREATE_MYCODE
 %----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_varinputs, replacements) ;
 
-  for k = 1 : numel(genstruct.lists.varinput)
-    n = genstruct.lists.varinput(k) ;
+  for kvar = 1 : numel(genstruct.lists.varinput)
+    indvar = genstruct.lists.varinput(kvar) ;
     fprintf( fidmycode, '%% %s\t:\t%s\n', ...
-	     datastruct(n).props.matlab, datastruct(n).props.text) ;
+	     datastruct(indvar).props.matlab, datastruct(indvar).props.text) ;
   end
 
   
-  fprintf( fidmycode, '\n\n\n') ;
-
-
-  %======================================================================  
-  %
-  % Writing info for calculated and output variables
-  %
-  %======================================================================  
-  %----------------------------------------------------------------------
-  % General header comment
-  %----------------------------------------------------------------------
-  WriteTextBlocks(fidmycode, textstruct.mycode.info_commentoutputs, replacements) ;
+  fprintf( fidmycode, '\n') ;
 
   %----------------------------------------------------------------------
   % Matlab assignments lines for calculated inputs
   %----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_calcinputs, replacements) ;
   
-  for k = 1 : numel(genstruct.lists.calc)
-    n = genstruct.lists.calc(k) ;
+  for kcalc = 1 : numel(genstruct.lists.calc)
+    indcalc = genstruct.lists.calc(kcalc) ;
     
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
-    fprintf( fidmycode, '%% %s\n', datastruct(n).props.text) ;
+    fprintf( fidmycode, '%% %s\n', datastruct(indcalc).props.text) ;
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
     
-    fprintf( fidmycode, '%s = zzz ; \n\n', datastruct(n).props.matlab ) ;      
+    fprintf( fidmycode, '%s = zzz ; \n\n', datastruct(indcalc).props.matlab ) ;      
   end
   
+  fprintf( fidmycode, '\n') ;
 
   %----------------------------------------------------------------------
   % Matlab assignment lines for answers to questions
   %----------------------------------------------------------------------
   WriteTextBlocks(fidmycode, textstruct.mycode.info_outputs, replacements) ;
-  for k = 1 : numel(genstruct.lists.question)
-    n = genstruct.lists.question(k) ;
+
+  for kquestion = 1 : numel(genstruct.lists.question)
+    indquestion = genstruct.lists.question(kquestion) ;
     
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
-    fprintf( fidmycode, '%% %s\n', datastruct(n).props.text) ;
+    fprintf( fidmycode, '%% %s\n', datastruct(indquestion).props.text) ;
     fprintf( fidmycode, '%%----------------------------------------------------------------------\n') ;
     
-    fprintf( fidmycode, '%s = zzz ; \n\n', datastruct(n).props.matlab ) ;      
+    fprintf( fidmycode, '%s = zzz ; \n\n', datastruct(indquestion).props.matlab ) ;      
   end
 
   fclose(fidmycode) ;

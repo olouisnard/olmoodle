@@ -35,7 +35,8 @@ errorcodes = olmoodle_DefineErrorCodes() ;
 % ====================================================================== 
 
 % Ask for Excel filename
-xlsfilename = askfilename( {'.xlsx','.xls'}, 1, textstruct.message.AskFileName{1}) ;
+xlsfilename = askfilename( {'.xlsx','.xls'}, 1, ...
+			   textstruct.message.AskFileName{1}) ;
 
 WriteTextBlocks(1, textstruct.message.ReadExcelFile) ;
 
