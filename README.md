@@ -54,7 +54,7 @@ The package is structured as follows
 - Fill the snippet code to program the correct answers to the questions. The comments in the snippet will guide you. **Don't forget to use .*, ./ and .^ in multiplications, divisions and exponentiations**, respectively.
 - Once you are done, click ENTER in the Command Window. The main script will build the output LaTeX file "`myquestion.tex`".
 - In a terminal, or in your favorite LaTeX system type "`xelatex myquestion`"
-- A file "`myquestion-moodle.xml`" has been created. Import it into moodle. You're done !
+- A file "`myquestion-moodle.xml`" has been created. Import it into moodle. You're done!
 
 <img src="doc/Workflow_png.png" alt="Workflow" width="700">
 
