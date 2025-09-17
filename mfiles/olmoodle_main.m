@@ -22,7 +22,17 @@ textstruct = olmoodle_ReadTexts (pathstruct.TextsFilename) ;
 
 % ======================================================================
 %
-% Definie error codes
+% Copyright
+%
+% ======================================================================
+errorcodes = olmoodle_DefineErrorCodes() ;
+
+WriteTextBlocks(1, textstruct.copyright.notice) ;
+fprintf(1, '\n') ;
+
+% ======================================================================
+%
+% Define error codes
 %
 % ======================================================================
 errorcodes = olmoodle_DefineErrorCodes() ;

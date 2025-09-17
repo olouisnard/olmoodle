@@ -1,3 +1,9 @@
+.copyright.notice
+OLMOODLE  Copyright (C) 2025  Olivier LOUISNARD
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under
+certain conditions (LGPL). See COPYING and COPYING.lesser.
+
 .mycode.info_inputs
 %######################################################################
 %
@@ -23,10 +29,10 @@
 .mycode.info_commentoutputs
 %######################################################################
 %
-% You must modify the folllowing executable lines (replacing zzz by
-% your own computations)
+% You must modify the executable lines starting by zzz = at the end of
+% this file (replacing "zzz" by your own computations).
 %
-% Ti is here that you must
+% It is here that you must
 %
 %  . compute the secondary input data ('C' code in your Excel
 %     file) in function of the inputs (listed above).

@@ -1,3 +1,9 @@
+.copyright.notice
+OLMOODLE  Copyright (C) 2025  Olivier LOUISNARD
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under
+certain conditions (LGPL). See COPYING and COPYING.lesser.
+
 .mycode.info_inputs
 %######################################################################
 %
