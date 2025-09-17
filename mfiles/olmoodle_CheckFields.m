@@ -37,7 +37,7 @@ for ifield = 1:numel(excelstruct)
       % future, that make LaTeX hang...
       genstruct.moodlecategory = tmp ;     
     end
-    
+
     
    case 'header'
     %======================================================================
@@ -53,6 +53,9 @@ for ifield = 1:numel(excelstruct)
       % Header is not void.
       genstruct.header = tmp ;     
     end
+
+    % Extract pdfmode.
+    genstruct.pdfmode = excelstruct(ifield).props.mode ;
 
     
    case 'numberofsets'

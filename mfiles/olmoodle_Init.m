@@ -7,8 +7,10 @@
 %
 %
 % Usage: 
-%     fid = olmoodle_Init (OutputFile, TO_FILE_FLAG, ...
-%           QuestionCategory, StartFilename)
+% function fid = olmoodle_Init (OutputFile, ...
+% 			      TO_FILE_FLAG, ...
+% 			      QuestionCategory, ...
+% 			      StartFilename)
 %
 % On input :
 %  OutputFile : 
@@ -36,10 +38,15 @@
 function fid = olmoodle_Init (OutputFile, ...
 			      TO_FILE_FLAG, ...
 			      QuestionCategory, ...
-			      StartFilename)
+			      StartFilename, ...
+			      Mode)
 
-DEFAULT_FILESTARTNAME = 'start.tex' ;
-DEFAULT_MOODLE_CATEGORY = 'OLMoodle' ;
+DEFAULT_FILESTARTNAME = 'start.tex' ; % Base LaTeX file
+DEFAULT_MOODLE_CATEGORY = 'OLMoodle' ; % Default moodle category
+
+if nargin < 5
+  Mode = 1 ; % By default, output pdf file with corrections
+end
 
 if nargin < 4
   error('StartFilename should be provided in arg 4')
@@ -53,7 +60,11 @@ if nargin < 2 || isempty(TO_FILE_FLAG)
   TO_FILE_FLAG = 0 ;
 end
 
+%----------------------------------------------------------------------
+% Copy start.tex file to current LaTeX file. 
+%----------------------------------------------------------------------
 if TO_FILE_FLAG
+  % Normal behaviour, write LaTeX file
   copyok = copyfile(StartFilename, OutputFile) ; % Copie de l'entete
   if ~copyok
     warning('Can''t find start.tex. Check installation') ;
@@ -62,9 +73,18 @@ if TO_FILE_FLAG
   end
   [fid, err] = fopen( OutputFile, 'a') ;
 else
+  % Debug, write to screen instead of LaTeX file 
   type start.tex
   fid = 1 ;
 end
+
+if Mode == 1
+  fprintf(fid, '\\usepackage{moodle} \n') ;
+else
+  fprintf(fid, '\\usepackage[handout]{moodle} \n') ;
+end
+
+fprintf(fid, '\\begin{document} \n') ;
 
 fprintf(fid, '\\begin{quiz}{%s} \n\n', QuestionCategory) ;
 

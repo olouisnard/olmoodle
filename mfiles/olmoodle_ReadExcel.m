@@ -95,7 +95,7 @@ while ~done
       
       MOODLECAT_WAS_FOUND = 1 ;
      
-     case 'H'
+     case {'H', 'H*'}
       %============================================================
       % Header (the title of generated question)
       %============================================================
@@ -103,7 +103,15 @@ while ~done
       excelstruct(iok).type        = 'header' ;
       excelstruct(iok).lineinexcel = ilin ;
       excelstruct(iok).props.value = tabcells{ilin, CHEADER} ; 
+      excelstruct(iok).props.mode = 1 ; % Default: output pdf file
+                                        % is corrected 
      
+      % Variant H*: 
+      % output pdf file % is uncorrected 
+      if numel(code) == 2 && code(2) == '*'
+	excelstruct(iok).props.mode = 0 ;
+      end
+      
      case 'N'
       %============================================================
       % Number of sets

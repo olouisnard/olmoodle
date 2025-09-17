@@ -116,7 +116,8 @@ WriteTextBlocks(1, textstruct.message.InitLatexFile) ;
 
 fid = olmoodle_Init (OutputFile, TOFILE, ...
 		     genstruct.moodlecategory, ...
-		     pathstruct.StartFilename) ;
+		     pathstruct.StartFilename, ...
+		     genstruct.pdfmode) ;
 
 WriteTextBlocks(1, textstruct.message.WriteLatexFile) ;
 
@@ -230,7 +231,7 @@ for iset = 1 : genstruct.nset
   fprintf(fid, '\\end{cloze} \n') ;
   fprintf(fid, '\n') ;
   fprintf(fid, '\n') ;
-    
+  fprintf(fid, '\\pagebreak\n') ;
 end
 
 % ====================================================================== 
