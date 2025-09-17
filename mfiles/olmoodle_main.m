@@ -137,7 +137,10 @@ end
 
 % ======================================================================
 %
-% MAIN LOOP.
+% MAIN DOUBLE LOOP. 
+% External loop is over number of sets
+% Internal loop is over number of items extracted from the lines of
+% the Excel file.
 %
 % ======================================================================
 
@@ -146,8 +149,10 @@ fprintf(1, '%s : ', textstruct.message.Dataset{1}) ;
 
 for iset = 1 : genstruct.nset
 
+  % Screen counter
   fprintf(1, '%d ', iset) ;
   
+  % Start cloze question
   fprintf(fid, ' \\begin{cloze}{%s} \n', genstruct.header) ;
 
   for n = 1 : numel(datastruct)
