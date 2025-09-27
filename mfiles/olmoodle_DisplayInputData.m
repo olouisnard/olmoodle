@@ -9,16 +9,17 @@
 % 
 %
 % On input :
-%   fid            : file handler for output
-%   sn         : a struct with field :
+%   fid : file handler for output
+%   sn  : a struct with the following fields :
 %      sentence       : the sentence to be displayed
 %      latex          : the latex name of variable
-%      value         : the value of variable
+%      value          : the value of variable
+%      format         : the way it should be formatted
 %      unit           : the unit of variable
 %
 % On output : out = 0 ;
 
-function out = olmoodle_DisplayInputData (fid, sn, ncr, opts)
+function out = olmoodle_DisplayInputData (fid, sn, opts)
 
 
 DEFAULT_OPTS = struct('displayequalsign', 1) ; 
@@ -26,10 +27,6 @@ DEFAULT_FORMAT = 'E2' ;
 
 if nargin < 4 || isempty(opts)
   opts = DEFAULT_OPTS ;
-end
-
-if nargin < 3 || isempty(ncr)
-  ncr = 1 ;
 end
 
 if  ~isfield(sn, 'latex')  || isempty(sn.latex) || any(ismissing(sn.latex))
@@ -63,11 +60,5 @@ fprintf(fid, '%s%s $', strvalue, sn.unit) ;
 
 fprintf(fid, '\n') ;
 
-%----------------------------------------------------------------------
-% Display carriage returns
-%----------------------------------------------------------------------
-for n = 1 : ncr
-  fprintf(fid, '\n') ;
-end
 
 
