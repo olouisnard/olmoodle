@@ -36,11 +36,11 @@ certain conditions (LGPL). See COPYING and COPYING.lesser.
 %
 %  . calculer les données d'entrée secondaires (code 'C' dans votre
 %     fichier Excel) à partir des données d'entrées (listées
-%     ci-dessus), 
+%     ci-dessous), 
 %
 %  . calculer les bonnes réponses aux questions (code 'Q' dans votre
 %     fichier Excel) à partir des données d'entrées (listées
-%     ci-dessus).
+%     ci-dessous).
 %
 % Bien sûr, en général, vous aurez besoin d'autres variables
 % intermédiaires pour conduire vos calcul proprement. Vous êtes libres

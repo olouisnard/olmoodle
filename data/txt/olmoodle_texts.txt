@@ -35,10 +35,10 @@ certain conditions (LGPL). See COPYING and COPYING.lesser.
 % It is here that you must
 %
 %  . compute the secondary input data ('C' code in your Excel
-%     file) in function of the inputs (listed above).
+%     file) in function of the inputs (listed below).
 %
 %  . compute the correct answers to questions ('Q' code in your 
-%     Excel file) in function of the inputs (listed above).
+%     Excel file) in function of the inputs (listed below).
 %
 % Of course, generally, you will need other intermediate variables to
 % manage your computations in a clean manner. You are free to write
