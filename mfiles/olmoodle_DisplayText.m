@@ -7,31 +7,33 @@
 %
 % On input :
 %   fid            : file handler for output
-%   sentence       : the sentence to be displayed
+%
+%   sn  : a struct with the following fields :
+%      sentence       : the sentence to be displayed
+%      opts : a struct with fields
+%         DisplayLatexName : not considered
+%         DisplayEqualSign : not considered
+%         BreakLine :        whether a breakline is inserted before
+%                         next line or not      
 %
 % On output : out = 0 ;
 
-function out = olmoodle_DisplayText (fid, sentence, ncr)
+function out = olmoodle_DisplayText (fid, sn)
 
-if nargin < 3 || isempty(ncr)
-  ncr = 1 ;
-end
-
-if nargin < 2 || isempty(sentence) || any(ismissing(sentence))
-  sentence = ' ' ;
+if ~isfield(sn, 'sentence')  ||isempty(sn.sentence) || any(ismissing(sn.sentence))
+  sn.sentence = ' ' ;
 end
 
 %----------------------------------------------------------------------
 % Display sentence
 %----------------------------------------------------------------------
-fprintf(fid, '%s', sentence) ;
+fprintf(fid, '%s', sn.sentence) ;
+
 fprintf(fid, '\n') ;
 
-%----------------------------------------------------------------------
-% Display carriage returns
-%----------------------------------------------------------------------
-for n = 1 : ncr
+% Breakline
+if sn.opts.BreakLine
   fprintf(fid, '\n') ;
 end
 
-
+out = 0 ;

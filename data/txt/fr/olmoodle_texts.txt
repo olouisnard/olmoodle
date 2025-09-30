@@ -107,7 +107,7 @@ Si votre fichier mycode.m était prêt, vous pouvez maintenant compiler
 votre quiz en tapant : 
 
 .message.LaunchMeAgain
-Sinon, avant de compiler, finalisez-le , puis relancez-moi avant, en
+Sinon, avant de compiler, finalisez mycode.m , puis relancez-moi avant, en
 tapant ENTREE à toutes les questions.
 
 .message.Dataset

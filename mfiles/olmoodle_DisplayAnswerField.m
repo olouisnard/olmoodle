@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+%
 % OLMOODLE_DISPLAYANSWERFIELD
 %
 % Requires rounddigits.m
@@ -22,60 +24,35 @@
 %
 % Usage :
 %
-% function out = olmoodle_DisplayAnswerField (fid, ...
-% 					      sentence, ...
-% 					      solutionvalues, ...
-% 					      indexinset, ...
-% 					      unit, ...
-% 					      tolerance, ...
-% 					      intervalspecs, ...
-% 					      points )
+% function out = olmoodle_DisplayAnswerField (fid, sn)
 %
 % On input :
 %   fid            : file handler for output
-%   sentence       : a string containing the descriptive sentence
-%   solutionvalues : the whole set of solutions
-%   indexinset     : the index of current solution
-%   unit           : a string containing the unit (void by default)
-%   tolerance      : the relative tolerance on the result (0.05 by default)
-%   intervalspecs : 
-%     . if structure, defines how the interval is displayed. The fields should be :
-%         'format' : a string
-%                    the format, in the sprintf syntax (for
-%                    example %e.4 %g3.2 etc, see sprintf
-%                    documentation)
-%         'roundindex' : an integer
-%                    useful in fixed decimal format (typically %g),
-%                    specify position from where 0 are padded. For
-%                    example if roundindex = 2, values will be 200,
-%                    1300, 2100. See rounddigits documentation
+%   sn             : a struct with fields
+%      sentence       : a string containing the descriptive sentence
+%      latex          : the latex name of variable
+%      value          : the value of variable
+%      unit           : a string containing the unit (void by default)
+%      tol            : the relative tolerance on the result (0.05 by default)
+%      format         : the way it should be formatted
+%      min            : minimum value of the answer in the whole set
+%      max            : maximum value of the answer in the whole set
+%      points         : number of points attributed to answer
+%      opts : a struct with fields
+%         DisplayLatexName : whether the LaTeX name is displayed or not
+%         DisplayEqualSign : whether an equal sign is displayed after
+%                         variable name
+%         BreakLine :        not considered here, always break
+%                          after question.
+%
+% On output : out = 0 ;
 
-%     . if void or 1, default formatting in scientific notations and 3
-%       characteristic digits, corresponding to %0.2e
-%
-%     . if -1, don't display (min - max) info to the student
-%
-%     . if string, you provide the string yourself (at your own
-%        risk!). This may be useful if you want to slightly help the
-%        student by giving him a rough order of magnitude.
-%
-%   points : the number of points attributed to the current question (1 by default)
-%
-% On output : out = 1 ;
-
-function out = olmoodle_DisplayAnswerField (fid, sn, ncr, opts )
+function out = olmoodle_DisplayAnswerField (fid, sn)
 
 DEFAULT_FORMAT = 'E2' ;
 
 DEFAULT_OPTS = struct('DisplayLatexName', 1) ;
 
-if nargin < 4 || isempty(opts)
-  opts = DEFAULT_OPTS ;
-end
-
-if nargin < 3 || isempty(ncr)
-  ncr = 1 ;
-end
 
 if any(ismissing(sn.format)) || isempty(sn.format) || ~isfield(sn, 'format')
   sn.format = DEFAULT_FORMAT ;
@@ -88,13 +65,19 @@ end
 %----------------------------------------------------------------------
 % Display sentence and variable latex name
 %----------------------------------------------------------------------
-fprintf(fid, '%s : ', sn.sentence) ;
+fprintf(fid, '%s : $', sn.sentence) ;
 
-if opts.DisplayLatexName
-  fprintf(fid, '$%s =  $', sn.latex) ;
+% Latex name, if required
+if sn.opts.DisplayLatexName
+  fprintf(fid, '%s ', sn.latex) ;
+
+  % Equal sign, if required
+  if sn.opts.DisplayEqualSign
+    fprintf(fid, '= ') ;
+  end
 end
 
-fprintf(fid, '\n') ;
+fprintf(fid, '$ \n') ;
 
 %----------------------------------------------------------------------
 % Create latex/numerical environment
@@ -106,7 +89,6 @@ fprintf(fid, '\\item[tolerance={%.10e}] %.10e \n', sn.value * sn.tol, sn.value) 
 fprintf(fid, '\\end{numerical} \n $%s$ \n ', sn.unit) ;
 
 [~, formattype] = olmoodle_NumberWithPrecision (sn.format) ;
-
   
 %----------------------------------------------------------------------
 % Displays interval
@@ -133,10 +115,9 @@ switch formattype
 end
 
 fprintf(fid, '\n') ;
-
-%----------------------------------------------------------------------
-% Display carriage returns
-%----------------------------------------------------------------------
-for n = 1 : ncr
+% Breakline
+if sn.opts.BreakLine
   fprintf(fid, '\n') ;
 end
+
+out = 0 ;

@@ -103,7 +103,7 @@ Writing LaTeX output file
 If your mycode.m file was ready, you can now compile your quiz by typesetting: 
 
 .message.LaunchMeAgain
-Otherwise, before compiling, finalize it and launch me again, pressing ENTER to
+Otherwise, before compiling, finalize mycode.m and launch me again, pressing ENTER to
 all questions.
 
 .message.Dataset

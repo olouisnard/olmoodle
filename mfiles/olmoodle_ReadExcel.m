@@ -1,4 +1,11 @@
+% -*- coding: utf-8 -*-
+%
 % OLMOODLE_READEXCEL :
+%
+% Reads input Excel file and decode. Rough datas ar are stored in
+% excelstruct. 
+%
+% Most of the checks will be delayed in olmoodle_checkfields.
 
 function [excelstruct, lists, errorstruct] = ...
     olmoodle_ReadExcel (xlsfilename, errorcodes)
@@ -32,7 +39,7 @@ CMOODLECAT = CTEXT ;
 %
 %======================================================================
 opts = detectImportOptions(xlsfilename) ;
-% opts = setvaropts(opts, 'Formattage', 'FillValue', {''} ); % A vÃ©rifier
+% opts = setvaropts(opts, 'Formattage', 'FillValue', {''} ); % A vérifier
 
 tabcells = readcell(xlsfilename, "Range", "A1:I100") ;
 
@@ -81,7 +88,7 @@ while ~done
     % If line is not a comment, increment number of active lines and
     % examine code      
     
-    switch code 
+    switch code(1)
       
      case 'M'
       %============================================================
@@ -138,8 +145,6 @@ while ~done
       excelstruct(iok).props.value    = tabcells{ilin, CVAL} ;
       excelstruct(iok).props.format   = tabcells{ilin, CFORMAT} ;
       excelstruct(iok).props.unit     = tabcells{ilin, CUNIT} ;
-      excelstruct(iok).props.opts = struct([]) ;
-      
      
      case 'T'
       %============================================================
@@ -152,11 +157,12 @@ while ~done
       excelstruct(iok).lineinexcel = ilin ;
 
       excelstruct(iok).props.text     = tabcells{ilin, CTEXT} ;
-      excelstruct(iok).props.opts = struct([]) ;
 
       lists.text(ktext) = iok ;
       
-     
+      % Variant T..
+      excelstruct(iok).props.opts = DecodeVariant(code) ;
+
      
      case 'V'
       %============================================================
@@ -177,10 +183,10 @@ while ~done
       excelstruct(iok).props.unit      = tabcells{ilin, CUNIT} ;
       excelstruct(iok).props.format    = tabcells{ilin, CFORMAT} ;
 
-      excelstruct(iok).props.opts = struct([]) ;
-
       lists.varinput(kvar) = iok ;
 
+       % Variants V.. and V*
+       excelstruct(iok).props.opts = DecodeVariant(code) ;
       
      case 'F'
       %============================================================
@@ -199,9 +205,10 @@ while ~done
       excelstruct(iok).props.unit     = tabcells{ilin, CUNIT} ;
       excelstruct(iok).props.format   = tabcells{ilin, CFORMAT} ;
 
-      excelstruct(iok).props.opts = struct([]) ;
-
       lists.fixedinput(kfixed) = iok ;
+
+      % Variants F.. and F*
+      excelstruct(iok).props.opts = DecodeVariant(code) ;
 
      
      case 'C'
@@ -220,12 +227,13 @@ while ~done
       excelstruct(iok).props.unit      = tabcells{ilin, CUNIT} ;
       excelstruct(iok).props.format    = tabcells{ilin, CFORMAT} ;
 
-      excelstruct(iok).props.opts = struct([]) ;
-
       lists.calc(kcalc) = iok ;
-      
      
-     case {'Q', 'Q*'}
+      % Variants C.. and C*
+      excelstruct(iok).props.opts = DecodeVariant(code) ;
+
+     
+     case 'Q'
       %============================================================
       % Question
       %============================================================
@@ -242,17 +250,18 @@ while ~done
       excelstruct(iok).props.format    = tabcells{ilin, CFORMAT} ;
       excelstruct(iok).props.points    = tabcells{ilin, CPOINTS} ;
 
-      excelstruct(iok).props.opts = [] ;
-      
       % Variant Q*
-      if numel(code) == 2 && code(2) == '*'
-	excelstruct(iok).props.opts.DisplayLatexName = 0 ;
-      end
+      excelstruct(iok).props.opts = DecodeVariant(code) ;
       
       lists.question(kquestion) = iok ;
       
      otherwise
+      %============================================================
+      % Any non-official code
+      %============================================================
+
 	nerrors = nerrors  + 1 ;
+	
 	errorstruct(nerrors).code = errorcodes.WRONG_CODE ;
 	errorstruct(nerrors).line = ilin ;
 	errorstruct(nerrors).string = code  ;
@@ -285,3 +294,26 @@ if ~MOODLECAT_WAS_FOUND
   errorstruct(nerrors).code = errorcodes.MOODLECAT_UNSPECIFIED ;
   errorstruct(nerrors).line = 0 ;
 end
+
+
+function opt = DecodeVariant(code)
+
+DEFAULT_OPTS = struct('BreakLine', 1, ...
+		      'DisplayLatexName', 1, ...
+		      'DisplayEqualSign', 1 ) ;
+
+opt = DEFAULT_OPTS ;
+
+variant = code(2:end) ;
+
+if ~isempty(variant)
+  if contains (variant, '..')
+    opt.BreakLine = 0;
+  end
+  
+  if contains (variant, '*')
+    opt.DisplayLatexName = 0;
+  end
+end
+
+
