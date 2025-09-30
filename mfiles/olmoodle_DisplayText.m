@@ -29,10 +29,10 @@ end
 %----------------------------------------------------------------------
 fprintf(fid, '%s', sn.sentence) ;
 
-fprintf(fid, '\n') ;
 
 % Breakline
 if sn.opts.BreakLine
+  fprintf(fid, '\n') ;
   fprintf(fid, '\n') ;
 end
 

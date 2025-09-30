@@ -81,9 +81,9 @@ end
 % Value and unit
 fprintf(fid, '%s%s $', strvalue, sn.unit) ;
 
-fprintf(fid, '\n') ;
 % Breakline
 if sn.opts.BreakLine
+  fprintf(fid, '\n') ;
   fprintf(fid, '\n') ;
 end
 

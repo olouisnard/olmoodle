@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+%
 clear
 
 % The '/' chracter depends on system.
@@ -51,7 +53,7 @@ while ~done
 end
 
 %----------------------------------------
-% Copy files 
+% Copy file olmoodle_texts.txt 
 %----------------------------------------
 % Source file
 SourceFile = append(pathstruct.DataPath, ...
@@ -72,10 +74,35 @@ DestFile = append(pathstruct.DataPath, ...
 % Let's copy !
 copyok = copyfile(SourceFile, DestFile) ; 
 
-% Display fonal message so that the user can see that it worked
+%----------------------------------------
+% Copy file start.tex file
+%----------------------------------------
+% Source file
+SourceFile = append(pathstruct.DataPath, ...
+		    slashcar, ...
+		    'tex', ...
+		    slashcar, ...
+		    selectedlang, ...
+		    slashcar, ...
+		    'start.tex') ;
 
-% Read texts
+% Destination file
+DestFile = append(pathstruct.DataPath, ...
+		    slashcar, ...
+		    'tex', ...
+		    slashcar, ...
+		    'start.tex') ;
+
+% Let's copy !
+copyok = copyfile(SourceFile, DestFile) ; 
+
+%======================================================================
+% Display final message so that the user can see that it worked
+%======================================================================
+
+% Read texts (just for that !)
 textstruct = olmoodle_ReadTexts (pathstruct.TextsFilename) ;
 
+% Print message
 fprintf(1, '%s\n', textstruct.message.Lang{1}) ;
 

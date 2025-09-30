@@ -7,197 +7,203 @@ certain conditions (LGPL). See COPYING and COPYING.lesser.
 .mycode.info_inputs
 %######################################################################
 %
-% The following variables will be pre-defined when this code will be
-% executed. They will be fed with the data you specified in your Excel
-% source file
+% Les variables suivantes seront pré-définies lorsque ce code sera
+% appelé. Elles seront remplies à partir des données que vous avez
+% spécifiées dans votre fichier Excel
 %
 %######################################################################
 %
 
 .mycode.info_fixedinputs
 %======================================================================
-% Fixed input data (identical for all students)
-% These are the data corresponding to 'F' code in your Excel file.
+% Données d'entrée fixes (identiques pour tous les élèves)
+% Ce sont les donnnées correspondant au code 'F' de votre fichier Excel
 %======================================================================
 
 .mycode.info_varinputs
 %======================================================================
-% Variable input data (different from one student to the other)
-% These are the data corresponding to 'V' code in your Excel file.
+% Données d'entrée variables (différentes d'un élève à l'autre)
+% Ce sont les donnnées correspondant au code 'V' de votre fichier Excel
 %======================================================================
 
 .mycode.info_commentoutputs
 %######################################################################
 %
-% You must modify the executable lines starting by zzz = at the end of
-% this file (replacing "zzz" by your own computations).
+% Vous devez modifier les lignes commençant par zzz = à la fin de ce
+% fichier (en remplaçant "zzz" par vos propres calculs)
 %
-% It is here that you must
+% C'est ici que vous devez :
 %
-%  . compute the secondary input data ('C' code in your Excel
-%     file) in function of the inputs (listed below).
+%  . calculer les données d'entrée secondaires (code 'C' dans votre
+%     fichier Excel) à partir des données d'entrées (listées
+%     ci-dessous), 
 %
-%  . compute the correct answers to questions ('Q' code in your 
-%     Excel file) in function of the inputs (listed below).
+%  . calculer les bonnes réponses aux questions (code 'Q' dans votre
+%     fichier Excel) à partir des données d'entrées (listées
+%     ci-dessous).
 %
-% Of course, generally, you will need other intermediate variables to
-% manage your computations in a clean manner. You are free to write
-% anything, within the limits of MATLAB syntax.
+% Bien sûr, en général, vous aurez besoin d'autres variables
+% intermédiaires pour conduire vos calcul proprement. Vous êtes libres
+% de tout écrire, dans la limite de la syntaxe MATLAB.
 %
 %
-% IMPORTANT : since there are several datasets, all the variables
-% manipulated below are vectors, each element of the vector
-% corresponding to a single dataset If you are familiar with MATLAB,
-% you are used to this. Otherwise, it's easy, all you have to know is
-% that you should use systematically the following operators:
+% IMPORTANT : puisqu'il y a plusieurs jeux de données, toutes les
+% variables ci-dessous doivent être des vecteurs de valeurs, chaque
+% élément du vecteur correspondant à un jeu de donnée.  Si vous êtes
+% familiers avec MATLAB, vous êtes habitués. Sinon, c'est facile il
+% vous suffit d'utiliser systématiquement les opérateurs :
 
-%   .* instead of * to multiply
-%   ./ instead of / to divide
-%   .^ instead of ^ to exponentiate
+%   .* au lieu de * pour multiplier
+%   ./ au lieu de / pour diviser
+%   .^ au lieu de ^ pour exposant
 %
-% To add or substract, use classically the operators + and -.
+% Pour l'addition et la soustraction c'est classiquement + et -.
 %
-% Often, if you already have programmed your exercise solution in
-% MATLAB before using this tool, you will just have to copy the lines
-% of your existing MATLAB file, with some marginal adaptations.
+% Souvent, si vous avez déjà traité l'exercice dans matlab, il
+% vous suffira de recopier les lignes de votre fichier matlab
+% existant, avec quelques adaptations.
 %
 %######################################################################
 %
 
 .mycode.info_calcinputs
 %======================================================================
-% Calculated input data 
-% These are the data corresponding to code 'C' in your Excel file.
+% Données d'entrée calculées 
+% Ce sont les donnnées correspondant au code 'C' de votre fichier Excel
 %======================================================================
 
 .mycode.info_outputs
 %======================================================================
-% Answers asked to student
-% These are the data corresponding to code 'Q' in your Excel file.
+% Données demandées à l'étudiant
+% Ce sont les donnnées correspondant au code 'Q' de votre fichier Excel
 %======================================================================
 
 .message.CreateUserCode
-Creating MATLAB user file...
+Creation fichier MATLAB utilisateur...
 
 .message.UserCodeCreated
-I've just created mycode.m and I open it in editor. You have to edit
-it now or later to link the correct answers to the input data. If you
-edit it later, launch me again afterwards.
+Je viens de créer mycode.m et je l'ouvre dans l'éditeur. Vous devrez
+l'éditer, soit maintenant, soit plus tard pour relier les réponses aux
+données d'entrée. Si vous l'éditez plus tard, vous devrez relancer 
+ce programme.
 
 .message.ExecUserCode
-Executing MATLAB user file...
+Exécution fichier MATLAB utilisateur...
 
 .message.ReadExcelFile
-Reading Excel file...
+Lecture fichier Excel...
 
 .message.CreateDataSets
-Creating data sets...
+Création des jeux de données...
 
 .message.InitLatexFile
-Creating LaTeX output file
+Création fichier LaTeX de sortie
 
 .message.WriteLatexFile
-Writing LaTeX output file
+Écriture fichier LaTeX de sortie
 
 .message.YouCanCompile
-If your mycode.m file was ready, you can now compile your quiz by typesetting: 
+Si votre fichier mycode.m était prêt, vous pouvez maintenant compiler 
+votre quiz en tapant : 
 
 .message.LaunchMeAgain
-Otherwise, before compiling, finalize mycode.m and launch me again, pressing ENTER to
-all questions.
+Sinon, avant de compiler, finalisez mycode.m , puis relancez-moi avant, en
+tapant ENTREE à toutes les questions.
 
 .message.Dataset
-Data set
+Jeu de données
 
 .message.PressEnter
-Press ENTER to continue...
+Appuyez sur ENTREE pour continuer...
 
 .message.AskFileName
-Excel file name (enter * to see all)
+Nom fichier Excel (tapez * pour voir tout)
 
 .message.Lang
-You should see this message in the language you chose.
+Vous devriez voir ce message dans la langue que vous avez choisie.
 
 .message.OLmoodleIsHere
-OLMoodle is here !
+OLMoodle est bien installé !
 
 .message.SepLine
 ----------------------------------------------------------------------
 
 .question.CreateMyCode
-I found an existing mycode.m file... Should I erase it ? Y/[N] : 
+   J'ai trouvé un fichier mycode.m existant... Je le recrée ? O/[N] : 
+
 
 .answer.yes
-Y
-y
+O
+o
 
 .answer.no
 N
 n
    
 .error.UnspecifiedTOL
-Tolerance unspecified.
+Tolérance non spécifiée.
  
 .error.BadTOL
-Tolerance should be numeric (line %d, I read "%s").
+La tolérance doit être numérique (ligne %d, je lis "%s").
 
 .error.VoidTOL
-Tolerance unspecified (line %d).
+Tolérance non spécifiée (ligne %d).
 
 .error.BadUnitTOL
-Bad unit for tolerance (line %d, I read "%s"). \n Leave blank or typeset "percent".
+L'unité de la tolérance est incorrecte (ligne %d, je lis "%s"). \n Laissez vide ou indiquez "percent".
 
 .error.WrongCode
-Wrong code (line %d, I read "%s").
+Code erroné (ligne %d, je lis "%s").
 
 .error.UnspecifiedNSET
-Number of datasets unspecified.
+Nombre de jeux de données non spécifié.
 
 .error.BadNSET
-Wrong number of datasets (line %d, I read "%s").
+Nombre de jeux de données erroné (ligne %d, je lis "%s").
 
 .error.VoidNSET
-Wrong number of datasets (line %d).
+Nombre de jeux de données erroné (ligne %d).
 
 .error.PointsNotNumeric
-Points must be numerics and positive integers (line %d, I read "%s").
+Les points doivent être numériques et entiers positifs (ligne %d, je lis "%s").
 
 .error.PointsNotInteger
-Points must be positive integers (line %d, I read "%s").
+Les points doivent être des entiers positifs (ligne %d, je lis "%s").
 
 .error.PrecNotNumeric
-Precision must be numeric and integer (line %d, I read "%s").
+La précision doit être numérique et entière (ligne %d, je lis "%s").
 
 .error.PrecNotInteger
-Precision must be integer (line %d, I read "%s").
+La precision doit être un entier (ligne %d, je lis "%s").
 
 .error.PrecUnspecified
-Warning: precision line %d unspecified.
+Attention: précision ligne %d non spécifiée.
 
 .error.TextIsNumeric
-Text field is numeric (line %d). This is considered as an error.
+Le texte est numérique (line %d). Je considère ça comme une erreur.
 
 .error.ValueNotNumeric
-Value should be numerical (line %d, I read "%s").
-Check whether in your country, decimal point is "." ou "," in Excel
+La valeur doit être numérique (ligne %d, je lis "%s").
+Vérifiez selon votre pays si le point décimal dans Excel est "." ou ","
 
 .error.UnitForgotSeparator
-Error when parsing unit %s, field %d (line %d)
-You probably forgot a separator between two units.
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Vous avez probablement oublié de mettre un séparateur entre deux unités.
 
 .error.UnitForgotLetter
-Error when parsing unit %s, field %d (line %d)
-There seems to be no unit letter after separator.
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Il semble ne pas y avoir de lettre après le séparateur.
 
 .error.UnitBadExponent
-Error when parsing unit %s, field %d (line %d)
-Badly formatted exponent.
+Erreur dans l'interprétation de l'unité %s, champ No %d (line %d)
+Exposant mal formatté
 
 .error.UnspecifiedMoodlecat
-Moodle category unspecified. If you don't know, add a code "M" and leave blank value.
+Catégorie Moodle non spécifiée. Si vous ne savez pas, ajoutez une ligne "M" et laissez la valeur vide.
 
 .error.Found
-I found errors. Correct the Excel file and launch me again.
+J'ai trouvé des erreurs. Corrigez le fichier Excel et relancez-moi.
+
 
 words.Line
-line
+ligne

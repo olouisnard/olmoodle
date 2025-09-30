@@ -42,7 +42,7 @@
 %         DisplayLatexName : whether the LaTeX name is displayed or not
 %         DisplayEqualSign : whether an equal sign is displayed after
 %                         variable name
-%         BreakLine :        not considered here, always break
+%         BreakLine :     not considered here, always break
 %                          after question.
 %
 % On output : out = 0 ;
@@ -115,9 +115,11 @@ switch formattype
 end
 
 fprintf(fid, '\n') ;
+fprintf(fid, '\n') ;
+
 % Breakline
-if sn.opts.BreakLine
-  fprintf(fid, '\n') ;
-end
+% $$$ if sn.opts.BreakLine
+% $$$   fprintf(fid, '\n') ;
+% $$$ end
 
 out = 0 ;
