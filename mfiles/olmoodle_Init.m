@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+%
 % OLMOODLE_INIT:
 %
 % Opens the output LaTeX file from first copying data/tex/start.tex

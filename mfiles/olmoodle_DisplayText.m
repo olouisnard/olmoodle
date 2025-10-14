@@ -1,3 +1,5 @@
+% -*- coding: utf-8 -*-
+%
 % OLMOODLE_DISPLAYTEXT
 %
 % Displays a text.
